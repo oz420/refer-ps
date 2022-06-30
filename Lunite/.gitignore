@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 #saves
-Azura-Server/data/saves/*
+grim-azura-Server/data/saves/*
 
 # Package Files #
 *.war
@@ -28,29 +28,29 @@ hs_err_pid*
 .classpath
 .project
 .settings/
-azura-client/.settings/
-azura-server/.settings/
-azura-runelite/.settings/
+grim-azura-client/.settings/
+grim-azura-server/.settings/
+grim-azura-runelite/.settings/
 
 
 # Intellij Specific
 *.iml
 .idea/
-azura-client/.idea/
-azura-server/.idea/
-azura-runelite/.idea/
+grim-azura-client/.idea/
+grim-azura-server/.idea/
+grim-azura-runelite/.idea/
 
 # Module Specific Directories
-azura-client/target/
-azura-server/target/
-azura-runelite/target/
+grim-azura-client/target/
+grim-azura-server/target/
+grim-azura-runelite/target/
 
 
 itemstats.dat
-azura-server/data/lottery_data.txt
-azura-server/src/main/java/com/ruse/world/content/collectionlog/CollectionLogInterface.java
-azura-server/src/main/java/com/ruse/net/packet/impl/ChatPacketListener.java
-azura-server/src/main/java/com/ruse/net/packet/impl/ChatPacketListener.java
-azura-server/src/main/java/com/ruse/world/content/collectionlog/CollectionLogInterface.java
-azura-server/src/main/java/com/ruse/model/PlayerRelations.java
-Azura-Client/src/main/java/org/necrotic/client/world/sound/Class5_Sub1.java
+grim-azura-server/data/lottery_data.txt
+grim-azura-server/src/main/java/com/ruse/world/content/collectionlog/CollectionLogInterface.java
+grim-azura-server/src/main/java/com/ruse/net/packet/impl/ChatPacketListener.java
+grim-azura-server/src/main/java/com/ruse/net/packet/impl/ChatPacketListener.java
+grim-azura-server/src/main/java/com/ruse/world/content/collectionlog/CollectionLogInterface.java
+grim-azura-server/src/main/java/com/ruse/model/PlayerRelations.java
+grim-azura-Client/src/main/java/org/necrotic/client/world/sound/Class5_Sub1.java

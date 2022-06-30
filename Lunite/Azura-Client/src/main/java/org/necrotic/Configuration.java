@@ -26,7 +26,7 @@ public class Configuration {
 	public static final boolean DROPBOX_MODE = false;
 	public final static String CLIENT_NAME = "Solak";
 	public final static String CACHE_DIRECTORY_NAME = "Solak";
-	public static final String SETTINGS_DIRECTORY_NAME = "Lunite_settings";
+	public static final String SETTINGS_DIRECTORY_NAME = "grimazura_settings";
 	public final static boolean JAGCACHED_ENABLED = true;
 	public final static String JAGCACHED_HOST = "";
 	public final static int SERVER_PORT = 9420;
