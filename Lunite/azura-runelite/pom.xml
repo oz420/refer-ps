@@ -8,11 +8,11 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>grim-azura-runelite</artifactId>
+    <artifactId>azura-runelite</artifactId>
     <dependencies>
         <dependency>
             <groupId>grim.azura</groupId>
-            <artifactId>grim-azura-client</artifactId>
+            <artifactId>azura-client</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>grim.azura</groupId>
-    <artifactId>grimazura</artifactId>
+    <artifactId>azura</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>grim-azura-client</module>
-        <module>grim-azura-server</module>
-        <module>grim-azura-runelite</module>
+        <module>azura-client</module>
+        <module>azura-server</module>
+        <module>azura-runelite</module>
     </modules>
     <repositories>
         <repository>
