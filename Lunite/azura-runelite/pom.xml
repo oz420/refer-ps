@@ -3,15 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>grim.solak.azura</artifactId>
-        <groupId>grim.azura</groupId>
+        <artifactId>azura.solak.azura</artifactId>
+        <groupId>net.azura</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>azura-runelite</artifactId>
     <dependencies>
         <dependency>
-            <groupId>grim.azura</groupId>
+            <groupId>net.azura</groupId>
             <artifactId>azura-client</artifactId>
             <version>${project.version}</version>
         </dependency>

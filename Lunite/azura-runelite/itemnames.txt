@@ -779,91 +779,91 @@ name: Poison chalice
 finish
 
 Item Id: 199
-name: Grimy guam
+name: azuray guam
 finish
 
 Item Id: 200
-name: Grimy guam
+name: azuray guam
 finish
 
 Item Id: 201
-name: Grimy marrentill
+name: azuray marrentill
 finish
 
 Item Id: 202
-name: Grimy marrentill
+name: azuray marrentill
 finish
 
 Item Id: 203
-name: Grimy tarromin
+name: azuray tarromin
 finish
 
 Item Id: 204
-name: Grimy tarromin
+name: azuray tarromin
 finish
 
 Item Id: 205
-name: Grimy harralander
+name: azuray harralander
 finish
 
 Item Id: 206
-name: Grimy harralander
+name: azuray harralander
 finish
 
 Item Id: 207
-name: Grimy ranarr
+name: azuray ranarr
 finish
 
 Item Id: 208
-name: Grimy ranarr
+name: azuray ranarr
 finish
 
 Item Id: 209
-name: Grimy irit
+name: azuray irit
 finish
 
 Item Id: 210
-name: Grimy irit
+name: azuray irit
 finish
 
 Item Id: 211
-name: Grimy avantoe
+name: azuray avantoe
 finish
 
 Item Id: 212
-name: Grimy avantoe
+name: azuray avantoe
 finish
 
 Item Id: 213
-name: Grimy kwuarm
+name: azuray kwuarm
 finish
 
 Item Id: 214
-name: Grimy kwuarm
+name: azuray kwuarm
 finish
 
 Item Id: 215
-name: Grimy cadantine
+name: azuray cadantine
 finish
 
 Item Id: 216
-name: Grimy cadantine
+name: azuray cadantine
 finish
 
 Item Id: 217
-name: Grimy dwarf weed
+name: azuray dwarf weed
 finish
 
 Item Id: 218
-name: Grimy dwarf weed
+name: azuray dwarf weed
 finish
 
 Item Id: 219
-name: Grimy torstol
+name: azuray torstol
 finish
 
 Item Id: 220
-name: Grimy torstol
+name: azuray torstol
 finish
 
 Item Id: 221
@@ -1083,7 +1083,7 @@ name: Poisoned fish food
 finish
 
 Item Id: 275
-name: Grimy key
+name: azuray key
 finish
 
 Item Id: 276
@@ -5879,7 +5879,7 @@ name: Lockpick
 finish
 
 Item Id: 1525
-name: Grimy snake weed
+name: azuray snake weed
 finish
 
 Item Id: 1526
@@ -5887,7 +5887,7 @@ name: Clean snake weed
 finish
 
 Item Id: 1527
-name: Grimy ardrigal
+name: azuray ardrigal
 finish
 
 Item Id: 1528
@@ -5895,7 +5895,7 @@ name: Clean ardrigal
 finish
 
 Item Id: 1529
-name: Grimy sito foil
+name: azuray sito foil
 finish
 
 Item Id: 1530
@@ -5903,7 +5903,7 @@ name: Clean sito foil
 finish
 
 Item Id: 1531
-name: Grimy volencia moss
+name: azuray volencia moss
 finish
 
 Item Id: 1532
@@ -5911,7 +5911,7 @@ name: Clean volencia moss
 finish
 
 Item Id: 1533
-name: Grimy rogue's purse
+name: azuray rogue's purse
 finish
 
 Item Id: 1534
@@ -9691,11 +9691,11 @@ name: Lantadyme potion (unf)
 finish
 
 Item Id: 2485
-name: Grimy lantadyme
+name: azuray lantadyme
 finish
 
 Item Id: 2486
-name: Grimy lantadyme
+name: azuray lantadyme
 finish
 
 Item Id: 2487
@@ -11891,19 +11891,19 @@ name: Pirate's hook
 finish
 
 Item Id: 3049
-name: Grimy toadflax
+name: azuray toadflax
 finish
 
 Item Id: 3050
-name: Grimy toadflax
+name: azuray toadflax
 finish
 
 Item Id: 3051
-name: Grimy snapdragon
+name: azuray snapdragon
 finish
 
 Item Id: 3052
-name: Grimy snapdragon
+name: azuray snapdragon
 finish
 
 Item Id: 3053
@@ -42031,11 +42031,11 @@ name: Jade vine seed
 finish
 
 Item Id: 11780
-name: The grim reaper's diary
+name: The azura reaper's diary
 finish
 
 Item Id: 11781
-name: Grim's robe
+name: azura's robe
 finish
 
 Item Id: 11782
@@ -42067,11 +42067,11 @@ name: 'voice of doom' potion
 finish
 
 Item Id: 11789
-name: Grim reaper hood
+name: azura reaper hood
 finish
 
 Item Id: 11790
-name: Grim reaper hood
+name: azura reaper hood
 finish
 
 Item Id: 11791
@@ -43583,11 +43583,11 @@ name: Clean spirit weed
 finish
 
 Item Id: 12174
-name: Grimy spirit weed
+name: azuray spirit weed
 finish
 
 Item Id: 12175
-name: Grimy spirit weed
+name: azuray spirit weed
 finish
 
 Item Id: 12176
@@ -53431,11 +53431,11 @@ name: Driftwood
 finish
 
 Item Id: 14836
-name: Grimy wergali
+name: azuray wergali
 finish
 
 Item Id: 14837
-name: Grimy wergali
+name: azuray wergali
 finish
 
 Item Id: 14838
@@ -63183,75 +63183,75 @@ name: Vial of water
 finish
 
 Item Id: 17494
-name: Grimy sagewort
+name: azuray sagewort
 finish
 
 Item Id: 17495
-name: Grimy sagewort
+name: azuray sagewort
 finish
 
 Item Id: 17496
-name: Grimy valerian
+name: azuray valerian
 finish
 
 Item Id: 17497
-name: Grimy valerian
+name: azuray valerian
 finish
 
 Item Id: 17498
-name: Grimy aloe
+name: azuray aloe
 finish
 
 Item Id: 17499
-name: Grimy aloe
+name: azuray aloe
 finish
 
 Item Id: 17500
-name: Grimy wormwood leaf
+name: azuray wormwood leaf
 finish
 
 Item Id: 17501
-name: Grimy wormwood leaf
+name: azuray wormwood leaf
 finish
 
 Item Id: 17502
-name: Grimy magebane
+name: azuray magebane
 finish
 
 Item Id: 17503
-name: Grimy magebane
+name: azuray magebane
 finish
 
 Item Id: 17504
-name: Grimy featherfoil
+name: azuray featherfoil
 finish
 
 Item Id: 17505
-name: Grimy featherfoil
+name: azuray featherfoil
 finish
 
 Item Id: 17506
-name: Grimy winter's grip
+name: azuray winter's grip
 finish
 
 Item Id: 17507
-name: Grimy winter's grip
+name: azuray winter's grip
 finish
 
 Item Id: 17508
-name: Grimy lycopus
+name: azuray lycopus
 finish
 
 Item Id: 17509
-name: Grimy lycopus
+name: azuray lycopus
 finish
 
 Item Id: 17510
-name: Grimy buckthorn
+name: azuray buckthorn
 finish
 
 Item Id: 17511
-name: Grimy buckthorn
+name: azuray buckthorn
 finish
 
 Item Id: 17512
@@ -72943,7 +72943,7 @@ name: Dom!nat!on legs
 finish
 
 Item Id: 20096
-name: Keldagrim library key
+name: Keldaazura library key
 finish
 
 Item Id: 20097
@@ -72963,11 +72963,11 @@ name: Cursed rapier
 finish
 
 Item Id: 20101
-name: Keldagrim key mould 4
+name: Keldaazura key mould 4
 finish
 
 Item Id: 20102
-name: Keldagrim key mould 5
+name: Keldaazura key mould 5
 finish
 
 Item Id: 20103
@@ -78867,11 +78867,11 @@ name: Clean fellstalk
 finish
 
 Item Id: 21626
-name: Grimy fellstalk
+name: azuray fellstalk
 finish
 
 Item Id: 21627
-name: Grimy fellstalk
+name: azuray fellstalk
 finish
 
 Item Id: 21628

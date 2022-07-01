@@ -20,7 +20,7 @@ public class Herblore {
 		if (herb == null) {
 			return false;
 		}
-		if (player.getInventory().contains(herb.getGrimyHerb())) {
+		if (player.getInventory().contains(herb.getazurayHerb())) {
 			if (player.getSkillManager().getCurrentLevel(Skill.HERBLORE) < herb.getLevelReq()) {
 				player.getPacketSender().sendMessage(
 						"You need a Herblore level of at least " + herb.getLevelReq() + " to clean this leaf.");
@@ -34,7 +34,7 @@ public class Herblore {
 			if (herb == Herbs.TORSTOL)
 				Achievements.doProgress(player, Achievements.Achievement.CLEAN_250_TORSTOLS);
 
-			player.getInventory().delete(herb.getGrimyHerb(), 1);
+			player.getInventory().delete(herb.getazurayHerb(), 1);
 			player.getInventory().add(herb.getCleanHerb(), 1);
 			player.getSkillManager().addExperience(Skill.HERBLORE, 30); 
 			player.getSkillManager().addExperience(Skill.HERBLORE, herb.getExp());

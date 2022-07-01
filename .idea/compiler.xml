@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="grim-azura-client" />
-        <module name="grim-azura-server" />
-        <module name="grim-azura-runelite" />
+        <module name="azura-client" />
+        <module name="azura-server" />
+        <module name="azura-runelite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="grim-azura" target="1.5" />
-      <module name="grim-azura-client" target="1.8" />
-      <module name="grim-azura-runelite" target="1.8" />
-      <module name="grim-azura-server" target="1.8" />
+      <module name="azura" target="1.5" />
+      <module name="azura-client" target="1.8" />
+      <module name="azura-runelite" target="1.8" />
+      <module name="azura-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

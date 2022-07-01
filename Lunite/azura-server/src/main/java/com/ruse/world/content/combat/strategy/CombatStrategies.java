@@ -75,7 +75,7 @@ public class CombatStrategies {
 		STRATEGIES.put(2881, new DagannothSupreme());
 		STRATEGIES.put(6260, new Graardor());
 		STRATEGIES.put(6263, new Steelwill());
-		STRATEGIES.put(6265, new Grimspike());
+		STRATEGIES.put(6265, new azuraspike());
 		STRATEGIES.put(6222, new KreeArra());
 		STRATEGIES.put(6223, new WingmanSkree());
 		STRATEGIES.put(6225, new Geerin());

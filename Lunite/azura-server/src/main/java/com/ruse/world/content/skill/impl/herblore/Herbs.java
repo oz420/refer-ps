@@ -7,17 +7,17 @@ public enum Herbs {
 	WERGALI(14836, 14854, 30, 9), AVANTOE(211, 261, 48, 10), KWUARM(213, 263, 54, 11), SNAPDRAGON(3051, 3000, 59, 12),
 	CADANTINE(215, 265, 65, 13), LANTADYME(2485, 2481, 67, 14), DWARFWEED(217, 267, 70, 15), TORSTOL(219, 269, 75, 16);
 
-	private int grimyHerb, cleanHerb, levelReq, cleaningExp;
+	private int azurayHerb, cleanHerb, levelReq, cleaningExp;
 
-	private Herbs(int grimyHerb, int cleanHerb, int levelReq, int cleaningExp) {
-		this.grimyHerb = grimyHerb;
+	private Herbs(int azurayHerb, int cleanHerb, int levelReq, int cleaningExp) {
+		this.azurayHerb = azurayHerb;
 		this.cleanHerb = cleanHerb;
 		this.levelReq = levelReq;
 		this.cleaningExp = cleaningExp;
 	}
 
-	public int getGrimyHerb() {
-		return grimyHerb;
+	public int getazurayHerb() {
+		return azurayHerb;
 	}
 
 	public int getCleanHerb() {
@@ -34,7 +34,7 @@ public enum Herbs {
 
 	public static Herbs forId(int herbId) {
 		for (Herbs herb : Herbs.values()) {
-			if (herb.getGrimyHerb() == herbId) {
+			if (herb.getazurayHerb() == herbId) {
 				return herb;
 			}
 		}

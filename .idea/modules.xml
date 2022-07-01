@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/grim-azura.iml" filepath="$PROJECT_DIR$/grim-azura.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grim-azura-Client/grim-azura-client.iml" filepath="$PROJECT_DIR$/grim-azura-Client/grim-azura-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grim-azura-runelite/grim-azura-runelite.iml" filepath="$PROJECT_DIR$/grim-azura-runelite/grim-azura-runelite.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grim-azura-server/grim-azura-server.iml" filepath="$PROJECT_DIR$/grim-azura-server/grim-azura-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/azura.iml" filepath="$PROJECT_DIR$/azura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/azura-Client/azura-client.iml" filepath="$PROJECT_DIR$/azura-Client/azura-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/azura-runelite/azura-runelite.iml" filepath="$PROJECT_DIR$/azura-runelite/azura-runelite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/azura-server/azura-server.iml" filepath="$PROJECT_DIR$/azura-server/azura-server.iml" />
     </modules>
   </component>
 </project>
