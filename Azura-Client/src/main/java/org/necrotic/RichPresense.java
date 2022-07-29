@@ -17,25 +17,25 @@ public class RichPresense {
 	private DiscordRichPresence presence;
 
 	public void initiate() {
-		lib = DiscordRPC.INSTANCE;
-		DiscordEventHandlers handlers = new DiscordEventHandlers();
-		lib.Discord_Initialize(CLIENT_ID, handlers, true, "");
-		presence = new DiscordRichPresence();
-		presence.startTimestamp = System.currentTimeMillis() / 1000;
-		presence.largeImageKey = "avatar";
-		presence.smallImageKey = "avatar";
-		presence.details = "The #1 Custom RSPS";
-		presence.state = "Play now with 200+ Players!";
-		updatePresence();
-		new Thread(() -> {
-			while (!Thread.currentThread().isInterrupted()) {
-				lib.Discord_RunCallbacks();
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException ignored) {
-				}
-			}
-		}, "RPC-Callback-Handler").start();
+//		lib = DiscordRPC.INSTANCE;
+//		DiscordEventHandlers handlers = new DiscordEventHandlers();
+//		lib.Discord_Initialize(CLIENT_ID, handlers, true, "");
+//		presence = new DiscordRichPresence();
+//		presence.startTimestamp = System.currentTimeMillis() / 1000;
+//		presence.largeImageKey = "avatar";
+//		presence.smallImageKey = "avatar";
+//		presence.details = "The #1 Custom RSPS";
+//		presence.state = "Play now with 200+ Players!";
+//		updatePresence();
+//		new Thread(() -> {
+//			while (!Thread.currentThread().isInterrupted()) {
+//				lib.Discord_RunCallbacks();
+//				try {
+//					Thread.sleep(2000);
+//				} catch (InterruptedException ignored) {
+//				}
+//			}
+//		}, "RPC-Callback-Handler").start();
 	}
 
 
@@ -65,7 +65,7 @@ public class RichPresense {
 	}
 
 	public boolean presenceIsNull() {
-		return presence == null;
+		return false;
 	}
 
 	public void updateDetails(String details) {
@@ -84,6 +84,6 @@ public class RichPresense {
 	}
 
 	private void updatePresence() {
-		lib.Discord_UpdatePresence(presence);
+//		lib.Discord_UpdatePresence(presence);
 	}
 }

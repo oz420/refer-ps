@@ -1658,10 +1658,86 @@ public class CustomInterfaces extends RSInterface {
 
 	}
 
+	public static void collectionLog(TextDrawingArea[] advancedFonts) {
+		RSInterface tab = addInterface(61000);
+		addSprite(61001, 1731);
+		addText(61002, "Collection Log", advancedFonts, 2, 0xff981f, true, true);
+
+		String[] tabNames = {"Bosses", "Mboxes", "Keys", "Other"};
+
+		for (int i = 0; i < tabNames.length; ++i) {
+			addConfigButton(61003 + i, 61000, 1732, 1733, 96, 20, "View "+tabNames[i], i, 5, 1106);
+			addText(61008 + i, tabNames[i], advancedFonts, 1, 0xff981f, false, true);
+		}
+
+		addText(61015, "barrows", advancedFonts, 2, 0xff981f, false, true);
+		addText(61016, "Obtained: <col=ff0000>0/9", advancedFonts, 0, 0xff981f, false, true);
+		addText(61017, "barrows kills: <col=ffffff>1", advancedFonts, 0, 0xff981f, false, true);
+		addHoverButton(24502, CLOSE_BUTTON, CLOSE_BUTTON, 21, 21, "Close", 250, 24503, 3);
+		addHoveredButton(24503, CLOSE_BUTTON_HOVER, CLOSE_BUTTON_HOVER, 21, 21, 24504);
+		addSprite(61018,1734);
+		addText(61019, "Rewards for completing the collection log:", advancedFonts, 0, 0xff981f, false, true);
+		addHoverButton(61020,1735, 70, 39, "Collect", 0, 61021, 1);
+		addHoveredButton(61021, 1736, 70, 39, 858);
+		addText(61023, "Claim", advancedFonts, 2, 0xff981f, false, true);
+
+		addToItemGroup(61024, 5, 1, 7, 5, false, new String[]{null, null, null, null, null});
+
+		int x = 10, y = 10, child = 0;
+		tab.totalChildren(23);
+		tab.child(child++, 61001, x, y);
+
+		tab.child(child++, 61002, 250+x, 10+y);
+		tab.child(child++, 24502, 476+x, 10+y);
+		tab.child(child++, 24503, 476+x, 10+y);
+		for (int i = 0; i < tabNames.length; ++i) {
+			tab.child(child++, 61003 + i, 10+x+(i * 83), 34+y);
+			tab.child(child++, 61008 + i, 14+x+(i * 85), 37+y);
+		}
+		tab.child(child++, 61025, 214+x, 98+y);
+		tab.child(child++, 61050, 11+x, 58+y);
+		tab.child(child++, 61015, 216+x, 57+y);
+		tab.child(child++, 61016, 216+x, 81+y);
+		tab.child(child++, 61017, 380,90);
+		tab.child(child++, 61018, 216+x, 255+y);
+		tab.child(child++, 61019, 216+x, 242+y);
+		tab.child(child++, 61020, 415+x, 259+y);
+		tab.child(child++, 61021, 415+x, 259+y);
+		tab.child(child++, 61023, 432+x, 276+y);
+		tab.child(child++, 61024, 222+x, 260+y);
+
+		RSInterface items = addInterface(61025);
+
+		addToItemGroup(61026, 6, 35, 10, 5, false, new String[]{null, null, null, null, null});
+
+		items.totalChildren(1);
+
+
+		items.child(0, 61026, 5, 5);
+		items.width = 500;
+		items.height = 155;
+		items.scrollMax = 800;
+
+		RSInterface scroll = addInterface(61050);
+		scroll.totalChildren(150);
+		for (int i = 0; i < 50; ++i) {
+			addHoverButton(61051 + i, i % 2 == 0 ? 1739 : 1738, 186, 15, "", -1, 61101 + i, 1);
+			addHoveredButton(61101 + i, 1737, 186, 15, 61049);
+			addText(61151 + i, "barrows", advancedFonts, 1, 0xff981f, false, true);
+			scroll.child(i, 61051 + i, 0, i * 15);
+			scroll.child(i + 50, 61101 + i, 0, i * 15);
+			scroll.child(i + 100, 61151 + i, 2, y-10);
+			y+= 15;
+		}
+		scroll.width = 186;
+		scroll.height = 243;
+		scroll.scrollMax = 750;
+	}
 	private static void shopInterface() {
 		RSInterface shopInventory = interfaceCache[3900];
 		shopInventory.inv = new int[5000];
 		shopInventory.invStackSizes = new int[5000];
+
 		// shopInventory.transparencyItems = new int[1000];
 		shopInventory.drawInfinity = true;
 		shopInventory.width = 8;
@@ -2433,7 +2509,7 @@ public class CustomInterfaces extends RSInterface {
 		int c = 0;
 		int x = 25;
 		int y = 40;
-		tab.totalChildren(10);
+		tab.totalChildren(11);
 
 		addSpriteLoader(id, 1115);
 		tab.child(c++, id++, 0 + x, 0 + y);
@@ -2499,9 +2575,90 @@ public class CustomInterfaces extends RSInterface {
 
 			x += 52;
 		}
-
+		addSprite(105990, 1690);
+		tab.child(10, 105990, 114,87);
 	}
-
+	static void drItems(TextDrawingArea[] tda) {
+		int interID = 109300;
+		RSInterface tab = addInterface(interID);
+		int id = interID + 1;
+		int c = 0;
+		int x = 25;
+		int y = 20;
+		tab.totalChildren(24);
+		addSpriteLoader(id, 1425);
+		tab.child(c++, id++, 0 + x, 0 + y);
+		addHoverButtonWSpriteLoader(id, 1238, 16, 16, "Close Window", 0, id + 1, 3);
+		tab.child(c++, id++, 440 + x, 3 + y);
+		addHoveredImageWSpriteLoader(id, 1239, 16, 16, id + 1);
+		tab.child(c++, id++, 440 + x, 3 + y);
+		id++;
+		addText(id, "Highest Bonuses", tda, 2, 16750623, true, true);
+		tab.child(c++, id++, 239 + x, 4 + y);
+		addText(id, "Rank", tda, 1, 16750623, true, true);
+		tab.child(c++, id++, 172 + x, 29 + y);
+		addText(id, "Bonus", tda, 1, 16750623, true, true);
+		tab.child(c++, id++, 227 + x, 29 + y);
+		addText(id, "Item", tda, 1, 16750623, true, true);
+		tab.child(c++, id++, 350 + x, 29 + y);
+		y -= 5;
+		addText(id, "Gear", tda, 2, 16746752, false, true);
+		tab.child(c++, id++, 15 + x, 30 + y);
+		y += 16;
+		int i;
+		for (i = 0; i < 5; i++) {
+			addClickableText(id, "Check something", "Select", tda, 1, 16746752, false, true, 130);
+			tab.child(c++, id++, 20 + x, 30 + y);
+			y += 16;
+		}
+		y += 3;
+		addText(id, "Accessories", tda, 2, 16746752, false, true);
+		tab.child(c++, id++, 15 + x, 30 + y);
+		y += 16;
+		for (i = 0; i < 5; i++) {
+			addClickableText(id, "Check something", "Select", tda, 1, 16746752, false, true, 130);
+			tab.child(c++, id++, 20 + x, 30 + y);
+			y += 16;
+		}
+		y += 3;
+		addText(id, "Misc", tda, 2, 16746752, false, true);
+		tab.child(c++, id++, 15 + x, 30 + y);
+		y += 16;
+		for (i = 0; i < 3; i++) {
+			addClickableText(id, "Check something", "Select", tda, 1, 16746752, false, true, 130);
+			tab.child(c++, id++, 20 + x, 30 + y);
+			y += 16;
+		}
+		y = 20;
+		tab.child(c++, 109350, 152 + x, 47 + y);
+		interID = 109350;
+		RSInterface list = addTabInterface(interID);
+		list.totalChildren(450);
+		list.height = 240;
+		list.width = 286;
+		list.scrollMax = 4000;
+		id = interID + 1;
+		y = 0;
+		c = 0;
+		int j;
+		for (j = 0; j < 50; j++) {
+			addSpriteLoader(id, 1426);
+			list.child(c++, id++, 0, 0 + y);
+			y += 80;
+		}
+		y = 12;
+		for (j = 0; j < 100; j++) {
+			addText(id, "#" + (j + 1), 16751360, true, true, 100, fonts, 1);
+			list.child(c++, id++, 20, y);
+			addText(id, "+4000", 16751360, true, true, 100, fonts, 1);
+			list.child(c++, id++, 75, y);
+			addText(id, "Name", 16751360, false, true, 100, fonts, 1);
+			list.child(c++, id++, 150, y);
+			dropGroup(id, 1, 1, 1, 1);
+			list.child(c++, id++, 108, y - 6);
+			y += 40;
+		}
+	}
 	static void groupIronman(TextDrawingArea[] tda) {
 		int interID = 104000;
 		RSInterface tab = addInterface(interID);
@@ -2836,16 +2993,18 @@ public class CustomInterfaces extends RSInterface {
 			removeSomething(i);
 		}
 		RSInterface newTab = addTabInterface(15000);
+		addSpriteLoader(73155, 1668);
 		addButtonWSpriteLoader(15001, 618, "Show Equipment Stats", 41, 40);
 		addButtonWSpriteLoader(15002, 307, null, 41, 40);
 		addButtonWSpriteLoader(15003, 620, "Open Items kept on Death", 41, 40);
 		//addButtonWSpriteLoader(15004, 621, "Toggle Experience", 41, 40);
-		newTab.totalChildren(3);
+		newTab.totalChildren(4);
 		setBounds(15001, 25, 205, 0, newTab);
 		//setBounds(15002, 20, 120, 1, newTab);
 		setBounds(15003, 125, 205, 1, newTab);
 		//setBounds(15004, 999, 205, 3, newTab);
 		setBounds(1644, 0, 0, 2, newTab);
+		setBounds(73155, 22,123, 3, newTab);
 		//setBounds(1669, 0, 0, 5, newTab);
 	}
 
@@ -6079,6 +6238,7 @@ int x = 10;
 		addText(26015, "Display new hitmarks", 0xe4a146, false, true, 52, 0);
 		addText(26028, "Display hitpoints above \\nhead.", 0xe4a146, false, true, 52, 0);
 		addText(26025, "Display usernames above \\nhead.", 0xe4a146, false, true, 52, 0);
+		addText(26098, "Display prestige \\nrank above head.", 0xe4a146, false, true, 52, 0);
 		addText(26030, "Enable x10 damage", 0xe4a146, false, true, 52, 0);
 		addText(26032, "Show ground-item\\ntext", 0xe4a146, false, true, 52, 0);
 		addText(26034, "Enable highlighting \\nyour username\\nwhen mentioned-\\nin chat.", 0xe4a146, false, true, 52, 0);
@@ -6088,6 +6248,8 @@ int x = 10;
 		addButton(26014, 4, -1, 484, 485, 15, 15, "Toggle hitmarks", 654, 1);
 		addButton(26026, 4, -1, 484, 485, 15, 15, "Toggle hitpoints above head", 655, 1);
 		addButton(26027, 4, -1, 484, 485, 15, 15, "Toggle usernames above head", 656, 1);
+		addButton(26097, 4, -1, 484, 485, 15, 15, "Toggle prestiges", 6566, 1);
+
 		addButton(26029, 4, -1, 484, 485, 15, 15, "Toggle constitution", 657, 1);
 		addButton(26031, 4, -1, 484, 485, 15, 15, "Toggle ground-item text", 658, 1);
 		addButton(26033, 4, -1, 484, 485, 15, 15, "Toggle push-notifications", 659, 1);
@@ -6125,7 +6287,7 @@ int x = 10;
 		addHoverButton(26022, 490, 50, 39, "Fullscreen Mode", -1, 26023, 1);
 		addHoveredButton(26023, 491, 50, 39, 26024);
 
-		setChildren(73, rsinterface);
+		setChildren(75, rsinterface);
 		int i = 0;
 		// background
 		setBounds(26001, x + -15, y + -30, i, rsinterface);
@@ -6310,6 +6472,11 @@ int x = 10;
 		setBounds(26066, x + 9, y + 178 + 21, i, rsinterface);
 		i++;
 		setBounds(26068, x + 175, y + 170 + 28, i, rsinterface);
+		// toggle title above heads
+		i++;
+		setBounds(26097, x + 432, 275, i, rsinterface);
+		i++;
+		setBounds(26098, 365, 275, i, rsinterface);
 
 	}
 
@@ -7708,7 +7875,7 @@ int x = 10;
 		clanChatTabInterface();
 		configureLunar();
 		redoSpellBooks();
-
+collectionLog(tda);
 		shopInterface();
 		bankInterface();
 		playerPanelv3();
@@ -7774,7 +7941,7 @@ int x = 10;
 
 		groupIronman(tda);
 		groupbankInterface();
-
+		drItems(tda);
 		wheelOfFortune();
 		accountCreation();
 		achievements();

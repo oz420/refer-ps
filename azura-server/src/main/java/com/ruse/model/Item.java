@@ -23,7 +23,11 @@ public class Item {
 		this.id = id;
 		this.amount = amount;
 	}
-
+	public Item(int id, int amount, String rarity) {
+		this.id = id;
+		this.amount = amount;
+		this.rarityofitem = rarity;
+	}
 	/**
 	 * An Item object constructor.
 	 * 
@@ -38,13 +42,16 @@ public class Item {
 	 */
 	private int id;
 
+	private String rarityofitem;
 	/**
 	 * Gets the item's id.
 	 */
 	public int getId() {
 		return id;
 	}
-
+	public String getRarityofItem() {
+		return rarityofitem;
+	}
 	/**
 	 * Sets the item's id.
 	 * 

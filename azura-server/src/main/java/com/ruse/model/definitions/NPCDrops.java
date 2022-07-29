@@ -36,6 +36,8 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import static com.ruse.world.content.osrscollectionlog.LogType.BOSSES;
+
 
 /**
  * Controls the npc drops
@@ -490,8 +492,9 @@ public class NPCDrops {
                         new GroundItem(item, pos, player.getUsername(), false, 150, goGlobal, 200));
                 DropLog.submit(player, new DropLogEntry(itemId, item.getAmount(), drop.isAnnounce()));
             }
+            BOSSES.log(player, npc.getId(), item);
+         //   player.getCollectionLog2().registerkill(npc.getId());
 
-            new CollectionEntry(npc.getId(), item.getId(), item.getAmount()).submit(player);
         }
 
 

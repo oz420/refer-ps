@@ -66,6 +66,9 @@ public class Load {
 			if (reader.has("display-username-above-head")) {
 				Configuration.DISPLAY_USERNAMES_ABOVE_HEAD = reader.get("display-username-above-head").getAsBoolean();
 			}
+			if (reader.has("display-prestiges-above-head")) {
+				Configuration.DISPLAY_PRESTIGES = reader.get("display-prestiges-above-head").getAsBoolean();
+			}
 			if (reader.has("gameframe")) {
 				GameFrameConstants.gameframeType = reader.get("gameframe").getAsBoolean() ? GameFrameConstants.GameFrameType.FRAME_554 : GameFrameConstants.GameFrameType.FRAME_525;
 			}

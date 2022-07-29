@@ -47,6 +47,8 @@ public class Save {
 			object.addProperty("new-cursor", Configuration.NEW_CURSORS);
 			object.addProperty("display-hp-above-head", Configuration.DISPLAY_HP_ABOVE_HEAD);
 			object.addProperty("display-username-above-head", Configuration.DISPLAY_USERNAMES_ABOVE_HEAD);
+			object.addProperty("display-prestiges-above-head", Configuration.DISPLAY_PRESTIGES);
+
 			object.addProperty("gameframe", GameFrameConstants.gameframeType == GameFrameConstants.GameFrameType.FRAME_525 ? false : false);
 			object.addProperty("highlight-username", Configuration.HIGHLIGHT_USERNAME);
 			object.addProperty("high-detail", Configuration.HIGH_DETAIL);
