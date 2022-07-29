@@ -1,6 +1,7 @@
 package com.ruse;
 
 import com.ruse.util.ShutdownHook;
+import com.ruse.world.content.seasonpass.PassRewards;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,6 +26,8 @@ public class GameServer {
         Runtime.getRuntime().addShutdownHook(new ShutdownHook());
         try {
             logger.info("Initializing the loader...");
+
+            PassRewards.differenceindays();
             loader.init();
             loader.finish();
             logger.info("The loader has finished loading utility tasks.");

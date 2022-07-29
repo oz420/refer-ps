@@ -552,13 +552,14 @@ public class PlayerUpdating {
 	 * @param target  The player to update appearance for.
 	 * @return The PlayerUpdating instance.
 	 */
-	private static void updateAppearance(Player player, PacketBuilder out, Player target) {
+	private static void updateAppearance(Player player, PacketBuilder out, Player target) {//this is what updates the player
 		Appearance appearance = target.getAppearance();
 		Equipment equipment = target.getEquipment();
 		PacketBuilder properties = new PacketBuilder();
 		properties.put(appearance.getGender().ordinal());
 		properties.put(appearance.getHeadHint());
 		properties.put(target.getLocation() == Location.WILDERNESS ? appearance.getBountyHunterSkull() : -1);
+		properties.put(appearance.getprestigeIcon());
 		properties.putShort(target.getSkullIcon());
 		if (player.getNpcTransformationId() <= 0) {
 			int[] equip = new int[equipment.capacity()];

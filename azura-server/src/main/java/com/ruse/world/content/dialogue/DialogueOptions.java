@@ -1302,6 +1302,27 @@ public class DialogueOptions {
                     }
                     player.getPacketSender().sendInterfaceRemoval();
                     break;
+                case 6668://yes
+                    player.getPacketSender().sendInterfaceRemoval();
+                    if(player.isunlockedseasonpass()){
+                        player.sendMessage("You have already unlocked the season pass!");
+                        return;
+
+                    }
+                    if (player.getInventory().contains(23275)) {
+                        player.getInventory().delete(23275,1);
+                        player.setunlockedseasonpass(true);
+                        player.sendMessage("You have unlocked the season pass!");
+                        player.getSeasonPass().checkforprevioustiers();
+                    } else {
+                        player.sendMessage("You do not have a season pass.");
+                    }
+
+                    break;
+                case 99928:
+
+                    ExperienceLamps.confirmoneorall(player,1);
+                    break;
                 case 666:
                     VaultOfWar.forgeGloves(player);
                     break;
@@ -1677,6 +1698,9 @@ public class DialogueOptions {
             switch (player.getDialogueActionId()) {
                 case 668://no
                     player.getPacketSender().sendInterfaceRemoval();
+                    break;
+                case 99928:
+                    ExperienceLamps.confirmoneorall(player,2);
                     break;
                 case 8005:
                 case 568:

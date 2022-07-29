@@ -633,8 +633,8 @@ public class NPCOptionPacketListener implements PacketListener {
                     case 521:
                         World.sendStaffMessage("<col=FF0066><img=2> [ALERT]<col=6600FF> "
                                 + player.getUsername() + " just tried to use the general store!");
-                        /*
-                        ShopManager.getShops().get(12).open(player);*/
+
+                        ShopManager.getShops().get(12).open(player);
                         break;
                     case 2292:
                         ShopManager.getShops().get(11).open(player);

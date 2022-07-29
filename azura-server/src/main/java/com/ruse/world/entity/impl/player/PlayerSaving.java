@@ -160,6 +160,8 @@ public class PlayerSaving {
 			object.addProperty("target-percentage",
 					new Integer(player.getPlayerKillingAttributes().getTargetPercentage()));
 			object.addProperty("bh-rank", new Integer(player.getAppearance().getBountyHunterSkull()));
+			object.addProperty("prestigeicon", new Integer(player.getAppearance().getprestigeIcon()));
+
 			object.addProperty("gender", player.getAppearance().getGender().name());
 			object.addProperty("spell-book", player.getSpellbook().name());
 			object.addProperty("prayer-book", player.getPrayerbook().name());
@@ -222,6 +224,10 @@ public class PlayerSaving {
 			object.addProperty("blowpipe-deg", new Integer(player.getBlowpipeCharges()));
 			object.add("brawlers-deg", builder.toJsonTree(player.getBrawlerChargers()));
 			object.add("ancient-deg", builder.toJsonTree(player.getAncientArmourCharges()));
+			object.addProperty("seasonpass-xp", new Integer(player.getSeasonPass().getXp()));
+			object.addProperty("seasonpass-tier", new Integer(player.getSeasonPass().getTier()));
+			object.addProperty("seasonpass-kc", new Integer(player.getkc500forseasonpass()));
+			object.addProperty("unlockedseasonpass", new Boolean(player.isunlockedseasonpass()));
 			object.add("killed-players", builder.toJsonTree(player.getPlayerKillingAttributes().getKilledPlayers()));
 			object.add("killed-gods", builder.toJsonTree(player.getAchievementAttributes().getGodsKilled()));
 			object.add("vod-brother",
@@ -247,6 +253,9 @@ public class PlayerSaving {
 					builder.toJsonTree(player.getMinigameAttributes().getDungeoneeringAttributes().getBoundItems()));
 
 			object.add("collection-data", builder.toJsonTree(player.getCollectionLogData()));
+			object.add("collectionlog-data", builder.toJsonTree(player.getCollectionLog2().collectionLog));
+			object.add("collectionlog-data2", builder.toJsonTree(player.getCollectionLog2().collectionLogofkills));
+			object.add("collectionlog-data3", builder.toJsonTree(player.getCollectionLog2().collectionLogofrewards));
 			object.add("holy-prayers-unlocked", builder.toJsonTree(player.getUnlockedHolyPrayers()));
 
 			object.addProperty("rune-ess", new Integer(player.getStoredRuneEssence()));
@@ -298,6 +307,8 @@ public class PlayerSaving {
 			object.addProperty("ghostwalking", new Boolean(player.isGhostWalking()));
 			object.addProperty("canghostwalk", new Boolean(player.canGhostWalk()));
 			object.addProperty("barrowschests", new Integer(player.getPointsHandler().getBarrowsChests()));
+
+
 			object.addProperty("cluesteps", new Integer(player.getPointsHandler().getClueSteps()));
 			object.addProperty("difficulty", player.getDifficulty().name());
 			object.add("hween2016", builder.toJsonTree(player.getHween2016All()));

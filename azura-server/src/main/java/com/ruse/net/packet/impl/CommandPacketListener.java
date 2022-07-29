@@ -18,6 +18,7 @@ import com.ruse.model.input.impl.ChangePassword;
 import com.ruse.model.input.impl.EnterReferral;
 import com.ruse.model.input.impl.SetPinPacketListener;
 import com.ruse.motivote3.doMotivote;
+import com.ruse.mysql.Store;
 import com.ruse.net.packet.Packet;
 import com.ruse.net.packet.PacketListener;
 import com.ruse.net.security.ConnectionHandler;
@@ -50,6 +51,8 @@ import com.ruse.world.content.minigames.impl.TreasureHunter;
 import com.ruse.world.content.minigames.impl.VaultOfWar;
 import com.ruse.world.content.minigames.impl.dungeoneering.Dungeoneering;
 import com.ruse.world.content.minigames.impl.dungeoneering.DungeoneeringParty;
+import com.ruse.world.content.osrscollectionlog.CollectionLog;
+import com.ruse.world.content.osrscollectionlog.LogType;
 import com.ruse.world.content.pos.PlayerOwnedShopManager;
 import com.ruse.world.content.progressionzone.ProgressionZone;
 import com.ruse.world.content.randomevents.EvilTree;
@@ -81,6 +84,8 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.*;
 
+import static com.ruse.world.content.osrscollectionlog.LogType.BOSSES;
+
 /**
  * This packet listener manages commands a player uses by using the command
  * console prompted by using the "`" char.
@@ -100,6 +105,9 @@ public class CommandPacketListener implements PacketListener {
         if (command[0].equalsIgnoreCase("gamble")) {
             TeleportHandler.teleportPlayer(player, new Position(2463, 5032, 0),
                     player.getSpellbook().getTeleportType());
+        }
+        if (command[0].equalsIgnoreCase("testcard")) {
+            CrystalChest.testcard(player);
         }
 
         if (command[0].equalsIgnoreCase("perks")) {
@@ -431,9 +439,7 @@ public class CommandPacketListener implements PacketListener {
             new DailyTaskHandler(player).resetTasks();
         }
 
-        if (command[0].equalsIgnoreCase("collection") || command[0].equalsIgnoreCase("collectionlog")) {
-            player.getCollectionLog().open();
-        }
+
         if (command[0].equalsIgnoreCase("whatdrops")) {
             try {
                 boolean isItem = false;
@@ -2062,7 +2068,7 @@ public class CommandPacketListener implements PacketListener {
             int level = Integer.parseInt(command[2]);
             if (level > 15000) {
                 player.getPacketSender().sendMessage("You can only have a maxmium level of 15000.");
-                return;
+              //  return;
             }
             Skill skill = Skill.forId(skillId);
             player.getSkillManager().setCurrentLevel(skill, level).setMaxLevel(skill, level).setExperience(skill,
@@ -3108,9 +3114,39 @@ public class CommandPacketListener implements PacketListener {
         if (command[0].equalsIgnoreCase("worldnpcs")) {
             player.sendMessage("There are currently " + World.getNpcs().size() + " npcs in the world");
         }
+        if (command[0].equalsIgnoreCase("collectionlog")) {
+            player.getCollectionLog2().open(BOSSES);
+        }
+        if (command[0].equalsIgnoreCase("barrowslog")) {
+            Item item = new Item(4710);
+
+            BOSSES.log(player, CollectionLog.BARROWS_KEY, item);
+            player.getCollectionLog2().open(BOSSES);
+        }
+        if (command[0].equalsIgnoreCase("logkill")) {
+
+            int npcid = Integer.parseInt(command[1]);
+            player.getCollectionLog2().registerkill(npcid);
+
+        }
+        if (command[0].equalsIgnoreCase("chaoselelog")) {
+            Item item = new Item(11995);
+        //    new Item(11995), new Item(7158), new Item(15261)),
+            Item item2 = new Item(7158);
+            Item item3 = new Item(15261);
+            BOSSES.log(player, 3200, item);
+            BOSSES.log(player, 3200, item2);
+            BOSSES.log(player, 3200, item3);
+
+            player.getCollectionLog2().open(BOSSES);
+        }
         if (command[0].equals("v1")) {
             NpcDefinition.parseNpcs().load();
             //World.sendMessage("<img=11>@gr2@Another 20 voters have been rewarded! Vote now using the ::vote command!");
+        }
+        if (command[0].equals("prestigeicon")) {
+            int prestigeicon = Integer.parseInt(command[1]);
+            player.getAppearance().setprestigeIcon(prestigeicon);
         }
         if (command[0].equals("takeitem")) {
             int item = Integer.parseInt(command[1]);
@@ -3509,10 +3545,32 @@ public class CommandPacketListener implements PacketListener {
             player.getPacketSender().sendObject(new GameObject(id, player.getPosition(), 10, 3));
             player.getPacketSender().sendMessage("Sending object: " + id);
         }
+        if (command[0].equalsIgnoreCase("spass")) {
+           player.getSeasonPass().openInterface();
+        }
+        if (command[0].equalsIgnoreCase("tdb")) {
+            new Thread(new Store(player)).run();
+        }
+        if (command[0].equalsIgnoreCase("tdb")) {
+            CrystalChest.handleChest(player,false);
+        }
+        if (command[0].equalsIgnoreCase("dritems") || command[0].equalsIgnoreCase("bisdr")) {
+            BestDRItemsInterface.openInterface(player, 0);
+        }
+        if (command[0].equalsIgnoreCase("timelog")) {
+          player.sendMessage(player.getRecordedLogin().toString()+"");
+        }
+        if (command[0].equalsIgnoreCase("addspassxp")) {
+            int xptoadd = Integer.parseInt(command[1]);
+
+            player.getSeasonPass().addXp(xptoadd);
+            player.getSeasonPass().openInterface();
+        }
         if (command[0].equalsIgnoreCase("config")) {
             int id = Integer.parseInt(command[1]);
             int state = Integer.parseInt(command[2]);
             player.getPacketSender().sendConfig(id, state).sendMessage("Sent config.");
+
         }
         if (command[0].equalsIgnoreCase("gamemode")) {
             if (command[1].equalsIgnoreCase("1")) {

@@ -130,11 +130,19 @@ public class ItemActionPacketListener implements PacketListener {
             Consumables.handlePotion(player, itemId, slot);
             return;
         }
-
-        if (BirdNests.isNest(itemId)) {
-            BirdNests.searchNest(player, itemId);
+        if (Cards.isCard(itemId)) {
+          Cards.useCard(player, itemId);
             return;
         }
+        if (player.getSeasonPass().isPass(itemId)) {
+            player.getSeasonPass().usepass();
+            return;
+        }
+            if (BirdNests.isNest(itemId)) {
+                BirdNests.searchNest(player, itemId);
+                return;
+            }
+
         if (Herblore.cleanHerb(player, itemId))
             return;
         if (MemberScrolls.handleScroll(player, itemId, false))

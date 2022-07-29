@@ -26,7 +26,8 @@ public class Achievements {
                     String name = achievement.name().replaceAll("_", " ");
                     player.getPacketSender().sendMessage(
                             "[ACHIEVEMENT] @blu@" + Misc.capitalizeJustFirst(achievement.name().replaceAll("_", " ") + " @bla@completed, claim your reward!"));
-
+                    player.getSeasonPass().addXp(2);
+                    player.sendMessage("You receive 2 XP for completinga  daily achievement!");
                     if (achievement.getDifficulty().ordinal() == 2) {
                         World.sendNewsMessage("<col=ff0000>" + Misc.capitalizeJustFirst(player.getUsername())
                                 + " <col=a72800>completed the achievement <col=ff0000>" + Misc.capitalizeJustFirst(achievement.name().replaceAll("_", " ") + "!"));

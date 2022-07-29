@@ -65,6 +65,9 @@ import com.ruse.world.content.minigames.impl.HallsOfValor;
 import com.ruse.world.content.minigames.impl.VoidOfDarkness;
 import com.ruse.world.content.minigames.impl.dungeoneering.Dungeoneering;
 import com.ruse.world.content.newspinner.MysteryBoxManager;
+import com.ruse.world.content.osrscollectionlog.Collection;
+import com.ruse.world.content.osrscollectionlog.CollectionLog;
+import com.ruse.world.content.osrscollectionlog.LogType;
 import com.ruse.world.content.pos.PlayerOwnedShopManager;
 import com.ruse.world.content.properscratchcard.Scratchcard;
 import com.ruse.world.content.scratchcards.ScratchCard;
@@ -105,6 +108,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Player extends Character {
 
+public static int BARROWS_CHESTS_OPENED, CALLISTOS_KILLED,DONATOR_MYSTERY_BOXES_OPENED,CRYSTAL_KEYS_OPENED,RAIDS_COMPLETED, CHAOS_ELEMENTALS_KILLED ;
+public static boolean BARROWS_KEY_LOG_CLAIMED,CALLISTO_LOG_CLAIMED,DONATOR_MYSTERY_BOX_LOG_CLAIMED,CRYSTAL_KEY_LOG_CLAIMED,RAIDS_LOG_CLAIMED, CHAOS_ELEMENTAL_LOG_CLAIMED;
+public boolean getbarrowschestsopened(){
+    return BARROWS_KEY_LOG_CLAIMED;
+}
     @Getter
     @Setter
     private ArrayList<String> offences = new ArrayList<>();
@@ -477,11 +485,18 @@ public class Player extends Character {
      * Collection Log Start
      */
 
+    private final CollectionLog collectionLog2 = new CollectionLog(this);
+
+    public CollectionLog getCollectionLog2() {
+        return collectionLog2;
+    }
+
     @Getter
     private final CollectionLogInterface collectionLog = new CollectionLogInterface(this);
     @Getter
     @Setter
     private List<CollectionEntry> collectionLogData = new ArrayList<>();
+
     private Map<Integer, Map<Integer, Integer>> collectedItems = new HashMap<>(); //wtf
     private final GamblingInterface gambling = new GamblingInterface(this);
     private final ScratchCard scratchCard = new ScratchCard(this);
@@ -569,6 +584,8 @@ public class Player extends Character {
     private int recoilCharges;
     private int forgingCharges;
     private int blowpipeCharges;
+    private int kc500forseasonpass;
+
     private int runEnergy = 100;
     private int currentBankTab;
     private int interfaceId, walkableInterfaceId, multiIcon;
@@ -663,6 +680,7 @@ public class Player extends Character {
     private boolean fri13may16;
     private boolean toggledglobalmessages;
     private boolean spiritdebug;
+    private boolean unlockedseasonpass;
     private boolean reffered;
     private boolean indung;
     private boolean doingClanBarrows;
@@ -922,7 +940,8 @@ public class Player extends Character {
     public void setCurrentVotingStreak(int currentVotingStreak) {
         this.currentVotingStreak = currentVotingStreak;
     }
-
+    public final Stopwatch loggedintime = new Stopwatch().reset();
+    public int npckillsforseasonpass = 0;
     public String getTimeString() {
         long playTime = minsPlayed;
         int days = 0;
@@ -3394,7 +3413,12 @@ public class Player extends Character {
     public int setBlowpipeCharges(int blowpipeCharges) {
         return this.blowpipeCharges = blowpipeCharges;
     }
-
+    public int set500kcforseasonpass(int kc) {
+        return this.kc500forseasonpass = kc;
+    }
+    public int getkc500forseasonpass() {
+        return this.kc500forseasonpass;
+    }
     public boolean voteMessageSent() {
         return this.voteMessageSent;
     }
@@ -3450,7 +3474,12 @@ public class Player extends Character {
     public void setSpiritDebug(boolean spiritdebug) {
         this.spiritdebug = spiritdebug;
     }
-
+    public void setunlockedseasonpass(boolean unlockedpass) {
+        this.unlockedseasonpass = unlockedpass;
+    }
+    public boolean isunlockedseasonpass() {
+        return unlockedseasonpass;
+    }
     public boolean isInDung() {
         return indung;
     }
@@ -3875,5 +3904,25 @@ public class Player extends Character {
         } else {
             return false;
         }
+    }
+public Collection logwerechecking;
+    public Collection getLogtoCheck() {
+        return logwerechecking;
+    }
+    public Collection setLogtoCheck(Collection log){
+        logwerechecking = log;
+        return logwerechecking;
+    }
+public LogType logtype;
+
+    /**
+     * what log type were viewing like bosses, mystery boxes, etc
+     * @param logType
+     */
+    public void setCollectionLogOpen(LogType logType) {
+        logtype = logType;
+    }
+    public LogType getCollectionLogOpen(){
+        return logtype;
     }
 }

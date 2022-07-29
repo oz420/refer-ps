@@ -44,6 +44,7 @@ import com.ruse.world.content.loyalty_streak.LoyaltyStreakManager;
 import com.ruse.world.content.minigames.impl.Dueling;
 import com.ruse.world.content.minigames.impl.PestControl;
 import com.ruse.world.content.minigames.impl.dungeoneering.DungeoneeringParty;
+import com.ruse.world.content.osrscollectionlog.CollectionLogButtons;
 import com.ruse.world.content.polling.PollCreation;
 import com.ruse.world.content.polling.PollManager;
 import com.ruse.world.content.rewardsList.RewardsHandler;
@@ -109,7 +110,9 @@ public class ButtonClickPacketListener implements PacketListener {
             player.setInputHandling(new ServerPerkContributionInput());
             return;
         }
-
+        if(CollectionLogButtons.onButtonClick(player, id)) {
+            return;
+        }
         if (player.getAchievements().handleButtonClick(id)) {
             return;
         }
@@ -124,6 +127,9 @@ public class ButtonClickPacketListener implements PacketListener {
         }
 
         if (player.getGoodieBag().handleClick(id)) {
+            return;
+        }
+        if(BestDRItemsInterface.buttonClicked(player,id)){
             return;
         }
         if (PossibleLootInterface.handleButton(player, id)) {
@@ -1355,6 +1361,9 @@ public class ButtonClickPacketListener implements PacketListener {
                 if (player.logout()) {
                     World.removePlayer(player);
                 }
+                break;
+            case 23185://open card pack
+                Cards.testcard(player);
                 break;
             // case 10003:
             case 29138:

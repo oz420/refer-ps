@@ -8,14 +8,17 @@ import com.ruse.model.Graphic;
 import com.ruse.model.Item;
 import com.ruse.model.definitions.ItemDefinition;
 import com.ruse.util.Misc;
+import com.ruse.world.content.osrscollectionlog.CollectionLog;
+import com.ruse.world.content.osrscollectionlog.LogType;
 import com.ruse.world.entity.impl.player.Player;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+import static com.ruse.world.content.osrscollectionlog.LogType.OTHER;
 
 public class CrystalChest {
 
-	public static void handleChest(final Player p, final GameObject chest, boolean command) {
+	public static void handleChest(final Player p, boolean command) {
 		if (!p.getClickDelay().elapsed(3000))
 			return;
 		if (!p.getInventory().contains(989)) {
@@ -37,7 +40,7 @@ public class CrystalChest {
 			public void execute() {
 				switch (tick) {
 				case 2:
-					Item item = itemRewards[Misc.randomMinusOne(itemRewards.length)];
+					Item item = itemRewards.get(Misc.randomMinusOne(itemRewards.size()));
 					p.getInventory().add(item);
 					if (item.getDefinition() != null && item.getDefinition().getName() != null) {
 						p.getPacketSender().sendMessage("..and find " + Misc.anOrA(item.getDefinition().getName()) + " "
@@ -45,10 +48,13 @@ public class CrystalChest {
 					} else {
 						p.getPacketSender().sendMessage("..and find an item!");
 					}
-					if (chest != null && !command) {
-						CustomObjects.objectRespawnTask(p, new GameObject(173, chest.getPosition().copy(), 10, 1),
-								chest, 10);
-					}
+
+//					if (chest != null && !command) {
+//						CustomObjects.objectRespawnTask(p, new GameObject(173, chest.getPosition().copy(), 10, 1),
+//								chest, 10);
+//					}
+
+					LogType.KEYS.log(p, CollectionLog.CRYSTAL_KEY, new Item( item.getId()));
 					stop();
 					break;
 				}
@@ -62,9 +68,9 @@ public class CrystalChest {
 		try {
 
 			List<Item> list = new ArrayList<Item>();
-			for (int i = 0; i < itemRewards.length; i++) {
-				list.add(itemRewards[i]);
-			}
+//			for (int i = 0; i < itemRewards.length; i++) {
+//				list.add(itemRewards[i]);
+//			}
 
 			resetInterface(player);
 
@@ -116,7 +122,26 @@ public class CrystalChest {
 			e.printStackTrace();
 		}
 	}
+public static void testcard(Player player){
+	player.getPacketSender().sendInterface(23080); // Open the interface.
 
+	for (int i = 23087; i < 23093; i++)
+		player.getPacketSender().sendItemOnInterface(i, -1, 1);
+
+
+
+	Item therandomitem;
+	for(int i = 0; i < 6; i++){
+		therandomitem = getRandomChestItem(itemRewards);
+		player.getPacketSender().sendItemOnInterface(23087+i, therandomitem.getId(), 1);
+		player.sendMessage("random item: "+therandomitem.getId());
+	}
+
+
+}
+	public static Item getRandomChestItem(List<Item> items) {
+		return items.get(new Random().nextInt(items.size()));
+	}
 	private static void resetInterface(Player player) {
 		for (int i = 8145; i < 8196; i++)
 			player.getPacketSender().sendString(i, "");
@@ -124,10 +149,16 @@ public class CrystalChest {
 			player.getPacketSender().sendString(i, "");
 		player.getPacketSender().sendString(8136, "Close window");
 	}
+	public static <T> T randomElement(List<T> list) {
+		if (list == null || list.size() == 0) {
+			return null;
+		}
+		//RANDOM_GEN.nextInt(list.size());
+		return list.get(RANDOM_GEN.nextInt(list.size()));
+	}
+	public static final Random RANDOM_GEN = new Random();
+	public static List<Item> itemRewards = Arrays.asList(// shit items
 
-	public static final Item[] itemRewards = {
-			// shit items
-			
 			new Item(2631, 1), // highway mask
 			new Item(2643, 1), // black cavalier
 			new Item(9470, 1), // gnome scarf
@@ -148,7 +179,7 @@ public class CrystalChest {
 			new Item(11714, 1), // set 16 Godsword shard 3
 			new Item(11732, 1), // set 17 Dragon Boots
 			new Item(15332, 1), // set 23 Overload
-			
+
 			new Item(6918, 1), // set 24 Infinity Armor 1
 			new Item(6916, 1), // set 25 Infinity Armor 2
 			new Item(6924, 1), // set 26 Infinity Armor 3
@@ -177,9 +208,9 @@ public class CrystalChest {
 			new Item(15612, 1), // donor infinity
 			new Item(4045, 1), // explosive potion
 			new Item(3751, 1), // berserker helm
-		//	2631,2643,9470,2570,11710,11712,11714,15332,6918,6916,6924,6922,6920,7400,7399,7398,5021
-		//	23020,6199,18350,18356,18352,18354,7956,290,989
-		//	20535,10835,11716,455,3321,3319,3322,3320,3318,3323,18350,18356,18352,18354
+			//	2631,2643,9470,2570,11710,11712,11714,15332,6918,6916,6924,6922,6920,7400,7399,7398,5021
+			//	23020,6199,18350,18356,18352,18354,7956,290,989
+			//	20535,10835,11716,455,3321,3319,3322,3320,3318,3323,18350,18356,18352,18354
 			// medium items
 			new Item(2, 100), // cannonball
 			new Item(9244, 50), // Dragon Bolts (e)
@@ -212,7 +243,6 @@ public class CrystalChest {
 			new Item(2579, 1), // set 41 Ranger Boots
 			new Item(2581, 1), // set 42 Robin Hood Hat
 			new Item(19352, 1) // dragon sq (or) kit
-
-	};
+	);
 
 }

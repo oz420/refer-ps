@@ -24,6 +24,7 @@ import com.ruse.world.content.dailytasks_new.TaskChallenge;
 import com.ruse.world.content.grandexchange.GrandExchangeSlot;
 import com.ruse.world.content.groupironman.GroupManager;
 import com.ruse.world.content.groupironman.IronmanGroup;
+import com.ruse.world.content.osrscollectionlog.Collection;
 import com.ruse.world.content.skill.SkillManager.Skills;
 import com.ruse.world.content.skill.impl.slayer.SlayerMaster;
 import com.ruse.world.content.skill.impl.slayer.SlayerTasks;
@@ -235,7 +236,30 @@ public class PlayerLoading {
                 }.getType();
                 player.setCollectionLogData(new Gson().fromJson(reader.get("collection-data"), collectionLogType));
             }
+            if (reader.has("collectionlog-data")) {
+                HashMap<Collection, ArrayList<Item>>collectionlog = builder.fromJson(reader.get("collectionlog-data"),
 
+                        new TypeToken<HashMap<Collection, ArrayList<Item>>>() {
+                        }.getType());
+                player.getCollectionLog2().collectionLog = collectionlog;
+
+            }
+            if (reader.has("collectionlog-data2")) {
+                HashMap<Collection, Integer>collectionlog2 = builder.fromJson(reader.get("collectionlog-data2"),
+
+                        new TypeToken<HashMap<Collection, Integer>>() {
+                        }.getType());
+                player.getCollectionLog2().collectionLogofkills= collectionlog2;
+
+            }
+            if (reader.has("collectionlog-data3")) {
+                HashMap<Collection, Boolean>collectionlog3 = builder.fromJson(reader.get("collectionlog-data3"),
+
+                        new TypeToken<HashMap<Collection, Boolean>>() {
+                        }.getType());
+                player.getCollectionLog2().collectionLogofrewards= collectionlog3;
+
+            }
             if (reader.has("holy-prayers-unlocked")) {
                 player.setUnlockedHolyPrayers(
                         builder.fromJson(reader.get("holy-prayers-unlocked").getAsJsonArray(), boolean[].class));
@@ -466,7 +490,9 @@ public class PlayerLoading {
             if (reader.has("bh-rank")) {
                 player.getAppearance().setBountyHunterSkull(reader.get("bh-rank").getAsInt());
             }
-
+            if (reader.has("prestigeicon")) {
+                player.getAppearance().setprestigeIcon(reader.get("prestigeicon").getAsInt());
+            }
             if (reader.has("gender")) {
                 player.getAppearance().setGender(Gender.valueOf(reader.get("gender").getAsString()));
             }
@@ -684,7 +710,19 @@ public class PlayerLoading {
             if (reader.has("blowpipe-deg")) {
                 player.setBlowpipeCharges(reader.get("blowpipe-deg").getAsInt());
             }
+            if (reader.has("seasonpass-xp")) {
+                player.getSeasonPass().setXp(reader.get("seasonpass-xp").getAsInt());
+            }
+            if (reader.has("seasonpass-tier")) {
+                player.getSeasonPass().setTier(reader.get("seasonpass-tier").getAsInt());
+            }
+            if (reader.has("seasonpass-kc")) {
+                player.set500kcforseasonpass(reader.get("seasonpass-kc").getAsInt());
 
+            }
+            if (reader.has("unlockedseasonpass")) {
+                player.setunlockedseasonpass(reader.get("unlockedseasonpass").getAsBoolean());
+            }
             if (reader.has("killed-players")) {
                 List<String> list = new ArrayList<String>();
                 String[] killed_players = builder.fromJson(reader.get("killed-players").getAsJsonArray(),
@@ -958,7 +996,6 @@ public class PlayerLoading {
             if (reader.has("barrowschests")) {
                 player.getPointsHandler().setBarrowsChests(reader.get("barrowschests").getAsInt(), false);
             }
-
             if (reader.has("cluesteps")) {
                 player.getPointsHandler().setClueSteps(reader.get("cluesteps").getAsInt(), false);
             }
