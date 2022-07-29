@@ -22,7 +22,7 @@
             <version>2.8.6</version>
         </dependency>
         <dependency>
-            <groupId>com.github.plong95</groupId>
+            <groupId>com.github.MinnDevelopment</groupId>
             <artifactId>java-discord-rpc</artifactId>
             <version>v2.0.1</version>
         </dependency>
@@ -30,6 +30,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ryleykimmel</groupId>
+            <artifactId>Alertify4J</artifactId>
+            <version>master</version>
         </dependency>
         <dependency>
             <groupId>net.runelite.pushingpixels</groupId>

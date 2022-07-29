@@ -43,6 +43,7 @@ public class Configuration {
 	public static boolean SAVE_ACCOUNTS = false;
 	public static boolean DISPLAY_HP_ABOVE_HEAD = false;
 	public static boolean DISPLAY_USERNAMES_ABOVE_HEAD = false;
+	public static boolean DISPLAY_PRESTIGES = false;
 	public static boolean TWEENING_ENABLED = true;
 	public static boolean NEW_HITMARKS = true;
 	public static boolean CONSTITUTION_ENABLED = false;
