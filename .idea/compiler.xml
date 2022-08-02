@@ -7,7 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="azura-client" />
         <module name="azura-server" />
+        <module name="azura-runelite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,7 +17,6 @@
       <module name="azura-client" target="1.8" />
       <module name="azura-runelite" target="1.8" />
       <module name="azura-server" target="1.8" />
-      <module name="azura-server1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

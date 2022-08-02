@@ -616,17 +616,6 @@ public final class ItemDefinition {
 				itemDef.name = "Impspawn necklace";
 				break;
 
-			case 23279:
-				itemDef.name = "Blue card";
-				itemDef.modelZoom = 1100;
-				itemDef.rotationY = 393;
-				itemDef.rotationX = 1000;
-
-				itemDef.groundActions = new String[]{null, null, "Take", null, null};
-				itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
-				itemDef.modelID = 18718;
-				break;
-
 			case 12601:
 				itemDef.name = "Ring of the gods";
 				itemDef.modelZoom = 900;
@@ -5658,12 +5647,6 @@ public final class ItemDefinition {
 				itemDef.name = "KanX gauntles";
 				itemDef.rdc2 = 7248247;
 				break;
-			case 23275:
-				itemDef.copyItem(5020);
-				itemDef.rdc3 = 73403;//666455
-				itemDef.actions = new String[]{"uses",null, null, null, "Drop"};
-				itemDef.name = "Gold Season Pass";
-				break;
 			case 16024:
 				itemDef.name = "KanX longsword";
 				itemDef.rdc2 = 7248247;
@@ -9711,56 +9694,7 @@ public final class ItemDefinition {
 	}
 
 	public static HashMap<Integer, Sprite> spriteCacheEffectTimers = new HashMap<>();
-	public static Sprite getLargeSprite(int itemId) {
-		ItemDefinition itemDef = get(itemId);
-		Model model = itemDef.getInventoryModel(1);
-		if (model == null) {
-			return null;
-		}
 
-		Sprite enabledSprite = new Sprite(150, 150);
-		int k1 = Rasterizer.centerX;
-		int l1 = Rasterizer.centerY;
-		int ai[] = Rasterizer.lineOffsets;
-		int ai1[] = DrawingArea.raster;
-		float depthBuffer[] = DrawingArea.depthBuffer;
-		int i2 = DrawingArea.width;
-		int j2 = DrawingArea.height;
-		int k2 = DrawingArea.topX;
-		int l2 = DrawingArea.bottomX;
-		int i3 = DrawingArea.topY;
-		int j3 = DrawingArea.clipBottom;
-		Rasterizer.notTextured = false;
-		DrawingArea.initDrawingArea(150, 150, enabledSprite.myPixels, new float[1024]);
-		DrawingArea.drawPixels(150, 0, 0, 0, 150);
-		Rasterizer.method364();
-		int k3 = itemId == 25910 ||itemId == 23073 || itemId == 24370 || itemId == 25904? 300 : 200;
-		//	System.out.println("k3: "+k3+" and zoom: "+itemDef.modelZoom+" and multiplied: "+(itemDef.modelZoom * 1.9D));
-		int l3 = Rasterizer.SINE[itemDef.rotationY] * k3 >> 16;
-		int i4 = Rasterizer.COSINE[itemDef.rotationY] * k3 >> 16;
-		model.renderSingle(itemDef.rotationX, itemDef.rotationZ, itemDef.rotationY, itemDef.modelOffsetX, l3 + model.modelHeight / 2 + itemDef.modelOffsetY, i4 + itemDef.modelOffsetY);
-
-//		if (itemDef.certTemplateID != -1) {
-//			int l5 = sprite1.maxWidth;
-//			int j6 = sprite1.maxHeight;
-//			sprite1.maxWidth = 50;
-//			sprite1.maxHeight = 50;
-//			sprite1.drawSprite(0, 0);
-//			sprite1.maxWidth = l5;
-//			sprite1.maxHeight = j6;
-//		}
-		DrawingArea.initDrawingArea(j2, i2, ai1, new float[1024]);
-		DrawingArea.setDrawingArea(j3, k2, l2, i3);
-		Rasterizer.centerX = k1;
-		Rasterizer.centerY = l1;
-		Rasterizer.lineOffsets = ai;
-		Rasterizer.notTextured = true;
-
-		enabledSprite.maxWidth = 150;
-		enabledSprite.maxHeight = 150;
-
-		return enabledSprite;
-	}
 	public static Sprite getSprite(int i, int j, int k, double zoom, boolean effectTimers) {
 		if (k == 0 && zoom != -1) {
 			Sprite sprite = (Sprite) mruNodes1.insertFromCache(i);

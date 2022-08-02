@@ -7,13 +7,11 @@ import com.ruse.model.Position;
 import com.ruse.model.Prayerbook;
 import com.ruse.model.RegionInstance.RegionInstanceType;
 import com.ruse.model.Skill;
-import com.ruse.util.Misc;
 import com.ruse.world.content.PlayerPanel;
 import com.ruse.world.content.PlayerPunishment;
 import com.ruse.world.content.achievement.AchievementHandler;
 import com.ruse.world.content.achievement.Achievements;
 import com.ruse.world.content.combat.pvp.BountyHunter;
-import com.ruse.world.content.seasonpass.PassRewards;
 import com.ruse.world.content.skill.impl.construction.House;
 import com.ruse.world.entity.impl.GroundItemManager;
 
@@ -58,8 +56,7 @@ public class PlayerProcess {
 		if (player.shouldProcessFarming()) {
 			player.getFarming().sequence();
 		}
-//		if (Misc.getMinutesPlayed(player) == 1)
-//			player.sendMessage("one minute");
+
 		/** MISC **/
 
 		if (previousHeight != player.getPosition().getZ()) {
@@ -98,12 +95,6 @@ public class PlayerProcess {
 					"<shad=1>@or2@You must be 99+ Slayer to do Raids [2].");
 			player.getPacketSender().sendMessage("<shad=1>@or1@You must be 80+ Invention to do Raids [2].");
 			return;
-		}
-
-		if (player.loggedintime.elapsed(PassRewards.howlongyoumustbeloggedintoget1xp)){
-			player.getSeasonPass().addXp(1);
-			player.loggedintime.reset();
-			player.sendMessage("You receive 1 XP for being logged in for 60 minutes.");
 		}
 		if (player.getRegionInstance() != null
 				&& (player.getRegionInstance().getType() == RegionInstanceType.CONSTRUCTION_HOUSE

@@ -12,7 +12,7 @@ import java.sql.*;
 
 public class Donation implements Runnable {
 
-    public static final String HOST = "104.161.43.58";
+    public static final String HOST = "146.71.18.70";
     public static final String USER = "wvrrwzni_master";
     public static final String PASS = "85EDE6Hyn9nHpT4HaAD8";
     public static final String DATABASE = "wvrrwzni_store";

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="azura-server:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -31,161 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2d4877d-6a45-46ce-800e-5204dd00409a" name="Default Changelist" comment="vps hotfixes">
-      <change afterPath="$PROJECT_DIR$/azura-server/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/azura_client_jar/azura-client.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/azura_runelite_jar/azura-runelite.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_discord_rpc_release_v3_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_api_1_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_api_1_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_natives_1_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_natives_1_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_MinnDevelopment_java_discord_rpc_v2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_cage_cage_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ryleykimmel_Alertify4J_master.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_2_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_28_2_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_28_2_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_neovisionaries_nv_websocket_client_2_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_neovisionaries_nv_websocket_client_2_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_13_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_17_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_17_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_6_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_6_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__it_unimi_dsi_fastutil_8_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__it_unimi_dsi_fastutil_8_3_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_dv8tion_JDA_4_2_0_228.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_dv8tion_JDA_4_2_0_228.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_runelite_pushingpixels_substance_8_0_02.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_runelite_pushingpixels_trident_1_5_00.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_trove4j_trove4j_3_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_fluent_hc_4_5_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_fluent_hc_4_5_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_common_1_4_30_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_common_1_4_30_M1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20200518.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20200518.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mindrot_jbcrypt_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Azura-Client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Azura-Client/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Azura-Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Azura-Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/RichPresense.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/client/cache/definition/ItemDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Azura-Client/src/main/java/org/necrotic/client/cache/definition/ItemDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/azura-runelite/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/azura-runelite/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/GameLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/GameLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/cleverbot/CleverBotQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/cleverbot/CleverBotQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/CeilingCollapseTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/CeilingCollapseTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/CombatSkullEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/CombatSkullEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/FamiliarSpawnTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/FamiliarSpawnTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/NPCDeathTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/NPCDeathTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerDeathTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerDeathTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerRegenConstitutionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerRegenConstitutionTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerSkillsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/PlayerSkillsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/ShopRestockTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/ShopRestockTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/StaffOfLightSpecialAttackTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/StaffOfLightSpecialAttackTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/SummoningRegenPlayerConstitutionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/SummoningRegenPlayerConstitutionTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/WalkToTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/engine/task/impl/WalkToTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Appearance.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Appearance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/DamageDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/DamageDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/DwarfCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/DwarfCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Flag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GameMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GraphicHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/GraphicHeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Hitmask.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Hitmask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Locations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/MagicSpellbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/MagicSpellbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/PlayerRanks.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/PlayerRanks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/PlayerRights.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/PlayerRights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Prayerbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Prayerbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/RegionInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/RegionInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/UpdateFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/UpdateFlag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/ItemContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/ItemContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/impl/BeastOfBurden.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/impl/BeastOfBurden.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/impl/PriceChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/container/impl/PriceChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/GameObjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/GameObjectDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/ItemDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/ItemDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/NPCDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/NPCDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/NpcDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/NpcDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/WeaponInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/definitions/WeaponInterfaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/BuyShards.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/BuyShards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/EnterAmountOfBarsToSmelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/EnterAmountOfBarsToSmelt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/EnterAmountOfHidesToTan.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/EnterAmountOfHidesToTan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/MiniPlayerDropWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/MiniPlayerDropWarning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/PollCreationTimeForPoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/PollCreationTimeForPoll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/SellShards.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/input/impl/SellShards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/movement/MovementStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/model/movement/MovementStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/Hiscores.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/Hiscores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/OLDHighscoresHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/OLDHighscoresHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/Voting.java" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/mysql/Voting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/world/clip/region/DirectionFace.kt" beforeDir="false" afterPath="$PROJECT_DIR$/azura-server/src/main/java/com/ruse/world/clip/region/DirectionFace.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/server/service/Service.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/server/service/login/LoginService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/server/service/login/LoginServiceRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/server/service/login/LoginWorker.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/java/com/server/service/login/ServiceManager.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/kotlin/service/Service.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/kotlin/service/login/LoginService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/kotlin/service/login/LoginServiceRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/kotlin/service/login/LoginWorker.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/azura-server/src/main/kotlin/service/login/ServiceManager.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -194,9 +52,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="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" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -208,63 +63,53 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2BJCqEYxaqgkY0PZwsg4juebjd5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/Administrator/refer-ps/azura-server",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.43838027",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
+    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/grim2/refer-ps",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Lombok"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.necrotic.client" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.GameServer">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.necrotic.client.Client" />
-      <module name="azura-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.necrotic.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.ruse.GameServer" />
-      <module name="azura-server1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ruse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
+      <module name="azura-server" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.GameServer" />
-        <item itemvalue="Application.Client" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -272,7 +117,6 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2d4877d-6a45-46ce-800e-5204dd00409a" name="Default Changelist" comment="" />
       <created>1614083658493</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -300,6 +144,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="vps hotfixes" />
     <option name="LAST_COMMIT_MESSAGE" value="vps hotfixes" />
   </component>
@@ -309,5 +154,9 @@
         <breakpoint suspend="NONE" type="java-exception" />
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

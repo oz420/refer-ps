@@ -13,8 +13,6 @@ import org.necrotic.client.world.Model;
 public final class Player extends Entity {
 
 	public static List mruNodes = new List(260);
-
-	public int maxprestiges = 6;
 	public boolean aBoolean1699;
 	private long aLong1697;
 	private long aLong1718;
@@ -39,7 +37,6 @@ public final class Player extends Entity {
 	public int team;
 	public boolean visible;
 	public int bountyHunterIcon;
-	public int prestigeIcon;
 	public int hintIcon;
 	public boolean skulled;
 	public int playerRights;
@@ -399,12 +396,10 @@ public final class Player extends Entity {
 		myGender = stream.getUnsignedByte();
 		headIcon = stream.getUnsignedByte();
 		bountyHunterIcon = stream.getUnsignedByte();
-		prestigeIcon = stream.getUnsignedByte();
 		skulled = stream.getUnsignedShort() == 1;
 		if (bountyHunterIcon > 4 && bountyHunterIcon != 255) {
 			bountyHunterIcon = 4;
 		}
-//		System.out.println(prestigeIcon+"");
 		desc = null;
 		team = 0;
 		for (int partId = 0; partId < 12; partId++) {

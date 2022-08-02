@@ -133,9 +133,9 @@ public class Shop extends ItemContainer {
      */
     public Shop(Player player, int id, String name, Item currency, Item[] stockItems) {
         super(player);
-//        if (stockItems.length > 42)
-//            throw new ArrayIndexOutOfBoundsException(
-//                    "Stock cannot have more than 40 items; check shop[" + id + "]: stockLength: " + stockItems.length);
+        if (stockItems.length > 42)
+            throw new ArrayIndexOutOfBoundsException(
+                    "Stock cannot have more than 40 items; check shop[" + id + "]: stockLength: " + stockItems.length);
         this.id = id;
         this.name = name.length() > 0 ? name : "General Store";
         this.currency = currency;
@@ -960,7 +960,7 @@ public class Shop extends ItemContainer {
 
     @Override
     public int capacity() {
-        return 100;
+        return 42;
     }
 
     @Override

@@ -154,9 +154,6 @@ public class Slayer {
         } else {
             int amountOfTickets = 0;
             player.getPacketSender().sendMessage("You've completed your Slayer task! Return to a Slayer master for another one.");
-            player.getSeasonPass().addXp(1);
-            player.getPacketSender().sendMessage("You receive 1 XP for completing a slayer task!");
-
             if (slayerTask.getTaskMaster() == SlayerMaster.EASY_SLAYER) {
                 amountOfTickets += 25;
                 DailyTask.EASY_SLAYER_TASKS.tryProgress(player);

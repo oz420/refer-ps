@@ -97,8 +97,6 @@ public class BossEventHandler {
 			player.setHasPlayerCompletedBossTask(true);
 			player.getPA().sendMessage(
 					"You have completed the boss task, check your inventory or bank or the floor for your reward.");
-			player.getSeasonPass().addXp(2);
-			player.sendMessage("You have received 2 XP for completing the boss event.");
 			array.add(player.getUsername());
 			finish(player);
 			return;

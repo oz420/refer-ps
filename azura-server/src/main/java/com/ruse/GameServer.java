@@ -1,7 +1,6 @@
 package com.ruse;
 
 import com.ruse.util.ShutdownHook;
-import com.ruse.world.content.seasonpass.PassRewards;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,15 +18,13 @@ public class GameServer {
     private static final GameLoader loader = new GameLoader(GameSettings.GAME_PORT);
     private static final Logger logger = Logger.getLogger("Ruse");
     private static boolean updating;
-    private static String TOKEN = "NjA4MzQ0NTI1NzMxMTM1NTE3.XramXQ.zzsrxRJoG-mBTcX0axa5M7DHSXw";
+    //private static String TOKEN = "NjA4MzQ0NTI1NzMxMTM1NTE3.XramXQ.zzsrxRJoG-mBTcX0axa5M7DHSXw";
 
 
     public static void main(String[] params) {
         Runtime.getRuntime().addShutdownHook(new ShutdownHook());
         try {
             logger.info("Initializing the loader...");
-
-            PassRewards.differenceindays();
             loader.init();
             loader.finish();
             logger.info("The loader has finished loading utility tasks.");

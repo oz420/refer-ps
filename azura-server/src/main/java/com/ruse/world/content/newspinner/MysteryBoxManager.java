@@ -9,15 +9,11 @@ import com.ruse.model.definitions.ItemDefinition;
 import com.ruse.world.World;
 import com.ruse.world.content.newspinner.boxes.MysteryBox;
 import com.ruse.world.content.newspinner.boxes.RegularMysteryBox;
-import com.ruse.world.content.osrscollectionlog.CollectionLog;
 import com.ruse.world.entity.impl.player.Player;
 import com.ruse.world.entity.impl.player.PlayerHandler;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import static com.ruse.world.content.osrscollectionlog.LogType.BOSSES;
-import static com.ruse.world.content.osrscollectionlog.LogType.MYSTERY_BOX;
 
 public class MysteryBoxManager {
 
@@ -186,7 +182,6 @@ public class MysteryBoxManager {
                 player.canMysteryBox = true;
                 isSpinning = false;
                 loadInformation();
-                MYSTERY_BOX.log(player, CollectionLog.MYSTERY_BOX, new Item( reward.getId()));
                 addLatestLoot(reward.getId());
                 this.stop();
             }

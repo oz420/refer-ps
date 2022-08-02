@@ -2,7 +2,6 @@ package org.necrotic.client;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import org.necrotic.Configuration;
-import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
 import org.necrotic.client.Settings.Save;
 import org.necrotic.client.accounts.Account;
@@ -70,7 +69,6 @@ import java.util.zip.CRC32;
 //import org.necrotic.client.graphics.particles.Particle;
 
 public class Client extends GameRenderer {
-    public static final RichPresense RICH_PRESENCE = new RichPresense();
     public static final int CACHE_INDEX_COUNT = 6;
     public static final int[] anIntArray1204 = {9104, 10275, 7595, 3610, 7975, 8526, 918, 38802, 24466, 10145, 58654, 5027, 1457, 16565, 34991, 25486};
 
@@ -1084,12 +1082,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final Class3_Sub7_Sub1 method407(Component component) {
-        Client.method509(component);
-        Class3_Sub7_Sub1 class3_sub7_sub1 = new Class3_Sub7_Sub1();
-        method484(class3_sub7_sub1);
-        return class3_sub7_sub1;
-    }
+
 
     private static final synchronized void method484(Class3_Sub7 class3_sub7) {
         aClass3_Sub7_1345 = class3_sub7;
@@ -1151,32 +1144,6 @@ public class Client extends GameRenderer {
         }
 
         method689(i);
-    }
-
-    private static final void method509(Component component) {
-        try {
-            Class5_Sub2 class5_sub2 = new Class5_Sub2_Sub2();
-            class5_sub2.method502(2048);
-            aClass5_932 = class5_sub2;
-        } catch (Throwable throwable) {
-            try {
-                aClass5_932 = new Class5_Sub2_Sub1(component);
-            } catch (Throwable throwable_16_) {
-                do {
-                    if (System.getProperty("java.vendor").toLowerCase().indexOf("microsoft") >= 0) {
-                        try {
-                            aClass5_932 = new Class5_Sub1();
-                        } catch (Throwable throwable_17_) {
-                            break;
-                        }
-
-                        return;
-                    }
-                } while (false);
-
-                aClass5_932 = new Class5(8000);
-            }
-        }
     }
 
     private static final synchronized void method55(boolean bool) {
@@ -1731,7 +1698,6 @@ public class Client extends GameRenderer {
         updateSetting(26014, Configuration.NEW_HITMARKS);
         updateSetting(26026, Configuration.DISPLAY_HP_ABOVE_HEAD);
         updateSetting(26027, Configuration.DISPLAY_USERNAMES_ABOVE_HEAD);
-        updateSetting(26097, Configuration.DISPLAY_PRESTIGES);
         updateSetting(26029, Configuration.CONSTITUTION_ENABLED);
         updateSetting(26033, Configuration.HIGHLIGHT_USERNAME);
         updateSetting(26054, !Configuration.HIGH_DETAIL);
@@ -1763,8 +1729,6 @@ public class Client extends GameRenderer {
                 stream.writeBoolean(Configuration.NEW_CURSORS);
                 stream.writeBoolean(Configuration.DISPLAY_HP_ABOVE_HEAD);
                 stream.writeBoolean(Configuration.DISPLAY_USERNAMES_ABOVE_HEAD);
-                stream.writeBoolean(Configuration.DISPLAY_PRESTIGES);
-
                 stream.writeBoolean(GameFrameConstants.gameframeType != GameFrameType.FRAME_525);
                 stream.writeBoolean(Configuration.HIGHLIGHT_USERNAME);
                 stream.writeBoolean(Configuration.HIGH_DETAIL);
@@ -1816,7 +1780,6 @@ public class Client extends GameRenderer {
             Configuration.NEW_CURSORS = stream.readBoolean();
             Configuration.DISPLAY_HP_ABOVE_HEAD = stream.readBoolean();
             Configuration.DISPLAY_USERNAMES_ABOVE_HEAD = stream.readBoolean();
-            Configuration.DISPLAY_PRESTIGES = stream.readBoolean();
             GameFrameConstants.gameframeType = stream.readBoolean() ? GameFrameType.FRAME_554 : GameFrameType.FRAME_525;
             Configuration.HIGHLIGHT_USERNAME = stream.readBoolean();
             Configuration.HIGH_DETAIL = stream.readBoolean();
@@ -2040,23 +2003,7 @@ public class Client extends GameRenderer {
                     }*/
                 }
                 break;
-            case "moveint":
-                try {
-                    int mainid = Integer.parseInt(args[1]);
-                    int childid = Integer.parseInt(args[2]);
-                    int xid = Integer.parseInt(args[3]);
-                    int yid = Integer.parseInt(args[4]);
 
-                    RSInterface rsi = RSInterface.interfaceCache[mainid];
-
-                    pushMessage("Moving interface " + childid + " to  x: "+xid+" and y: "+yid+".", 0, "");
-
-                    rsi.childX[childid] = xid;
-                    rsi.childY[childid] = yid;
-                } catch (Exception e) {
-                    pushMessage("Error", 0, "");
-                }
-                break;
         }
 
         switch (cmd) {
@@ -6234,12 +6181,6 @@ public class Client extends GameRenderer {
                     Save.settings(Client.getClient());
                     updateSetting(interfaceId, !Configuration.DISPLAY_USERNAMES_ABOVE_HEAD);
                     break;
-                case 26097:
-                    Configuration.DISPLAY_PRESTIGES = !Configuration.DISPLAY_PRESTIGES;
-                    pushMessage("Displaying prestiges above head turned " + (Configuration.DISPLAY_PRESTIGES ? "on" : "off") + ".", 0, "");
-                    Save.settings(Client.getClient());
-                    updateSetting(interfaceId, !Configuration.DISPLAY_PRESTIGES);
-                    break;
                 case 26014:
                     Configuration.NEW_HITMARKS = !Configuration.NEW_HITMARKS;
                     pushMessage("New hitmarks turned " + (Configuration.NEW_HITMARKS ? "on" : "off") + ".", 0, "");
@@ -7880,8 +7821,8 @@ public class Client extends GameRenderer {
                                     if (childInterface.id == 30375 && itemCollected(childInterface.inv[i3] - 1)) {
                                         childInterface.opacity = 50;
                                     }
-                                    if (childInterface.id == 25412 || childInterface.id == 23187  || childInterface.id == 23511) {
-                                        selectedItem = ItemDefinition.getLargeSprite(j9);
+                                    if (childInterface.id == 25412) {
+                                        selectedItem = ItemDefinition.getSizedSprite(j9, childInterface.invStackSizes[i3], l9, 64, 64);
                                     } else {
                                         selectedItem = ItemDefinition.getSprite(j9, childInterface.invStackSizes[i3], l9);
                                     }
@@ -7950,18 +7891,10 @@ public class Client extends GameRenderer {
                                         } else if (atInventoryInterfaceType != 0 && atInventoryIndex == i3 && atInventoryInterface == childInterface.id) {
                                             selectedItem.drawSprite1(k5, j6);
                                         } else {
-
                                             if (childInterface.id == 30375 && childInterface.invStackSizes[i3] == 0) {
                                                 selectedItem.drawSpriteWithOpacity(k5, j6, 75);
                                             } else {
-                                                if ( childInterface.id == 61026) {
-                                                    if (childInterface.invStackSizes[i3] == 0) {
-                                                        selectedItem.drawSpriteWithOpacity(k5, j6, 90);
-                                                    } else {
-                                                        selectedItem.drawSprite(k5,j6);
-                                                    }
-                                                }
-                                                else if (itemOpacity == 256) {
+                                                if (itemOpacity == 256) {
                                                     selectedItem.drawSprite(k5, j6);
                                                 } else {
                                                     selectedItem.drawSpriteWithOpacity(k5, j6, itemOpacity);
@@ -18419,7 +18352,6 @@ public class Client extends GameRenderer {
             newFancyFont = new RSFontSystem(true, "q8_full", titleStreamLoader);
             drawLogo();
             loadTitleScreen();
-            aClass3_Sub7_Sub1_1493 = method407(instance);
             aClass25_1948 = new Class25(22050, anInt197);
             Archive streamLoader = getArchive(2, "config", "config", expectedCRCs[2], 30);
             Archive streamLoader_1 = getArchive(3, "interface", "interface", expectedCRCs[3], 35);
@@ -19103,13 +19035,6 @@ public class Client extends GameRenderer {
                                 skullIcons[0].drawSprite(spriteDrawX - 12, spriteDrawY - l);
                                 l += 19;
                             }
-                            if(Configuration.DISPLAY_PRESTIGES)
-                            if (player.prestigeIcon > 0 && player.prestigeIcon < player.maxprestiges) {//here
-                                spritesMap.get(1708 + player.prestigeIcon).drawSprite(spriteDrawX - 24, spriteDrawY - l - 23);
-                                newSmallFont.drawCenteredString("@whi@Prestige: "+player.prestigeIcon, spriteDrawX, spriteDrawY - l + 40 , 0x15FF00, 0x000000);
-
-                                l += 28;
-                            }
                             if (player.bountyHunterIcon >= 0 && player.bountyHunterIcon <= 4) {
                                 spritesMap.get(1026 + player.bountyHunterIcon).drawSprite(spriteDrawX - (player.skulled ? 8 : 10), spriteDrawY - l);
                                 l += 28;
@@ -19121,21 +19046,21 @@ public class Client extends GameRenderer {
 
                             if (Configuration.DISPLAY_USERNAMES_ABOVE_HEAD) {
                                 if ((player.playerRights >= 1) && (player.playerRights <= 2) && (getOverheadPlayerTitle(player).startsWith("<col"))) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX, spriteDrawY , 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if ((player.playerRights >= 1) && (player.playerRights <= 2)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 20, spriteDrawY , 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 20, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if (player.playerRights == 10) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY , 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if (player.playerRights == 6 || player.playerRights == 8 || player.playerRights == 9) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY , 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if (player.playerRights == 7) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 85, spriteDrawY, 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 85, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if ((player.playerRights >= 3) && (player.playerRights <= 4)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 250, spriteDrawY, 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 250, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else if ((player.playerRights == 5)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 120, spriteDrawY, 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 120, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 } else {
-                                    newSmallFont.drawCenteredString((player.name != null ? player.name : "null username"), spriteDrawX, spriteDrawY , 0x15FF00, 0x000000);
+                                    newSmallFont.drawCenteredString((player.name != null ? player.name : "null username"), spriteDrawX, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 }
                             }
                         }
@@ -19932,7 +19857,7 @@ public class Client extends GameRenderer {
             rounded = true;
         }
         int hpBarXPps = (xPos + 3);
-        if (currentTarget instanceof Player) {//constitution
+        if (currentTarget instanceof Player) {
             Player player = (Player) currentTarget;
             drawCombatBox(xPos, yPos, width, height, currentHp, maxHp, hpBarXPps);
             newSmallFont.drawCenteredString(player.name, xPos + (width / 2), yPos + 10, 16777215, 0);

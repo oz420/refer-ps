@@ -163,92 +163,7 @@ public class RSInterface {
 		rsi.width = rsi.unrevealedSprite.myWidth;
 		rsi.height = rsi.unrevealedSprite.myHeight - 2;
 	}
-	private static void cardPack1(TextDrawingArea[] tda) {
 
-		final int STARTING_POINT = 23180;
-		RSInterface rsi = addInterface(STARTING_POINT);
-		addSprite(STARTING_POINT + 1, 1672);
-		addHoverButton(STARTING_POINT + 2, 55, 17, 17, "Close Window", 250, 5380, 3);
-		addHoveredButton(STARTING_POINT + 3, 90, 17, 17, 5379);
-		addText(STARTING_POINT + 4, "Card Pack", 0xff9b00, true, true, -1, tda, 2);
-		addButton(STARTING_POINT + 5, 1660, 1661, "Open Pack");
-		addText(STARTING_POINT + 6, "Open Pack", 0xff9b00, true, true, -1, tda, 2);
-		rsi.totalChildren(7);
-		setBounds(STARTING_POINT + 1, 125, 30, 0, rsi);
-		setBounds(STARTING_POINT + 2, 355, 33, 1, rsi);
-		setBounds(STARTING_POINT + 3, 355, 33, 2, rsi);
-		setBounds(STARTING_POINT + 4, 250, 35, 3, rsi);
-		setBounds(STARTING_POINT + 5, 192, 255, 4, rsi);
-		setBounds(STARTING_POINT + 6, 250, 262, 5, rsi);
-
-
-
-		addItemOnInterface(23187, 23511, new String[]{null});
-
-
-		setBounds(23187, 170, 85, 6, rsi);
-
-
-
-	}
-	private static void cardPack(TextDrawingArea[] tda) {
-
-		final int STARTING_POINT = 23080;
-		RSInterface rsi = addInterface(STARTING_POINT);
-		addSprite(STARTING_POINT + 1, 1672);
-		addHoverButton(STARTING_POINT + 2, 55, 17, 17, "Close Window", 250, 5380, 3);
-			addHoveredButton(STARTING_POINT + 3, 90, 17, 17, 5379);
-	addText(STARTING_POINT + 4, "Card Pack", 0xff9b00, true, true, -1, tda, 2);
-		addButton(STARTING_POINT + 5, 1660, 1661, "Open Pack");
-		addText(STARTING_POINT + 6, "Open Pack", 0xff9b00, true, true, -1, tda, 2);
-		rsi.totalChildren(18);
-		setBounds(STARTING_POINT + 1, 125, 30, 0, rsi);
-		setBounds(STARTING_POINT + 2, 355, 33, 1, rsi);
-		setBounds(STARTING_POINT + 3, 355, 33, 2, rsi);
-		setBounds(STARTING_POINT + 4, 250, 35, 3, rsi);
-		setBounds(STARTING_POINT + 5, 192, 255, 4, rsi);
-		setBounds(STARTING_POINT + 6, 250, 262, 5, rsi);
-
-
-
-		addItemOnInterface(23087, 23511, new String[]{null});
-		addItemOnInterface(23088, 23511, new String[]{null});
-		addItemOnInterface(23089, 23511, new String[]{null});
-		addItemOnInterface(23090, 23511, new String[]{null});
-		addItemOnInterface(23091, 23511, new String[]{null});
-		addItemOnInterface(23092, 23511, new String[]{null});
-
-
-
-		setBounds(23087, 160, 88, 12, rsi);
-		setBounds(23088, 237, 88, 13, rsi);
-		setBounds(23089, 312, 88, 14, rsi);
-		setBounds(23090, 160, 190, 15, rsi);
-		setBounds(23091, 237, 190, 16, rsi);
-		setBounds(23092, 312, 190, 17, rsi);
-
-				addSprite(23094, 1674);
-		addSprite(23095, 1674);
-		addSprite(23096, 1674);
-		addSprite(23097, 1674);
-		addSprite(23098, 1674);
-		addSprite(23099, 1674);
-
-
-
-
-
-
-		setBounds(23094, 143, 60, 6, rsi);
-		setBounds(23095, 220, 60, 7, rsi);
-		setBounds(23096, 295, 60, 8, rsi);
-		setBounds(23097, 143, 160, 9, rsi);
-		setBounds(23098, 220, 160, 10, rsi);
-		setBounds(23099, 295, 160, 11, rsi);
-
-
-
-	}
 	public Sprite unrevealedSprite;
 
 	private static void customServerPerks(TextDrawingArea[] font) {
@@ -5166,7 +5081,6 @@ public class RSInterface {
 		rsi.height = h;
 		rsi.inv = new int[w * h];
 		rsi.invStackSizes = new int[w * h];
-
 		rsi.usableItemInterface = false;
 		rsi.isInventoryInterface = false;
 		rsi.interfaceShown = false;
@@ -5180,29 +5094,7 @@ public class RSInterface {
 		}
 		rsi.type = 2;
 	}
-	public static void addContainer(int id, int contentType, int maxItemsOnSingleRow, int rows, int xPad, int yPad, int opacity, boolean move, boolean displayAmount, boolean displayExamine, String... actions) {
-		RSInterface container = addTabInterface(id);
-		container.width = maxItemsOnSingleRow;
-		container.height = rows;
-		container.inv = new int[maxItemsOnSingleRow * rows];
-		container.invStackSizes = new int[maxItemsOnSingleRow * rows];
-	//	container.parentID = id;
 
-	//	container.contentType = contentType;
-
-		container.sprites = new Sprite[20];
-		container.spritesX = new int[20];
-		container.spritesY = new int[20];
-		container.invSpritePadX = xPad;
-		container.invSpritePadY = yPad;
-
-		container.opacity = 110;
-	//	container.actions = actions;
-		container.allowSwapItems = move;
-		container.displayExamine = displayExamine;
-		container.type = 2;
-		//return container;
-	}
 	public static void opacityInterface() {
 		RSInterface rsi = addTabInterface(35555);
 		setChildren(1, rsi);
@@ -5566,8 +5458,7 @@ public class RSInterface {
 			mysteryBoxSpinner(textDrawingAreas);
 			customServerPerks(textDrawingAreas);
 			perkOverlays(textDrawingAreas);
-				cardPack(textDrawingAreas);
-			cardPack1(textDrawingAreas);
+
 			customInterfaces = new CustomInterfaces(textDrawingAreas);
 			customInterfaces.loadCustoms();
 		} catch (Exception e) {

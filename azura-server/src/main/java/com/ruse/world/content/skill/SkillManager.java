@@ -454,9 +454,6 @@ public class SkillManager {
                 player.getPacketSender()
                         .sendMessage("Well done! You've achieved the highest possible level in this skill!");
 
-                player.getSeasonPass().addXp(3);
-                player.sendMessage("You receive 3 XP for maxing your level.");
-
                 World.sendMessage("<shad=15536940><img=5> " + player.getUsername()
                         + " has just achieved the highest possible level in " + skillName + "!");
 

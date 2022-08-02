@@ -12,14 +12,10 @@ import com.ruse.world.content.boxes.ZombieRaidLoot;
 import com.ruse.world.content.casketopening.Box;
 import com.ruse.world.content.combat.prayer.CurseHandler;
 import com.ruse.world.content.combat.prayer.PrayerHandler;
-import com.ruse.world.content.osrscollectionlog.CollectionLog;
-import com.ruse.world.content.osrscollectionlog.LogType;
 import com.ruse.world.entity.impl.npc.NPC;
 import com.ruse.world.entity.impl.player.Player;
 
 import java.util.ArrayList;
-
-import static com.ruse.world.content.osrscollectionlog.LogType.MYSTERY_BOX;
 
 public class ZombieRaids {
 
@@ -313,7 +309,6 @@ public class ZombieRaids {
 
                     double amt = drop.getMin() + Misc.getRandom(drop.getMax() - drop.getMin());
 
-                    LogType.OTHER.log(player, CollectionLog.ZOMBIE_RAIDS, new Item( drop.getId()));
                     player.getInventory().add(new Item(drop.getId(), (int) amt));
                     player.sendMessage("<shad=1>@yel@You have receieved X" + (int) amt + " "+ ItemDefinition.forId(drop.getId()).getName() + " from this raid!" );
                 }

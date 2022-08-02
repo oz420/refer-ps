@@ -28,16 +28,16 @@ public class Bot {
     public static JDA discord;
 
     public static void init() {
-//        try {
-//            discord = JDABuilder.createDefault(TOKEN)
-//            .setToken(TOKEN)
-//            .setActivity(Activity.watching("Solak.io"))
-//            .build()
-//            .awaitReady(); // Blocking guarantees that JDA will be completely loaded.
-//            discord.addEventListener(new MessageReceived());
-//        } catch (LoginException | InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            discord = JDABuilder.createDefault(TOKEN)
+            .setToken(TOKEN)
+            .setActivity(Activity.watching("Solak.io"))
+            .build()
+            .awaitReady(); // Blocking guarantees that JDA will be completely loaded.
+            discord.addEventListener(new MessageReceived());
+        } catch (LoginException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     private static int countDown = 0;

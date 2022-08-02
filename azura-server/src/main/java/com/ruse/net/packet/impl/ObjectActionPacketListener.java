@@ -175,9 +175,6 @@ public class ObjectActionPacketListener implements PacketListener {
                             }
                         }
                         switch (id) {
-                            case 172:
-                                CrystalChest.handleChest(player,false);
-                                break;
                             case 13291:
                             case 22823:
                                 player.sendMessage("Coming soon...");
@@ -2376,8 +2373,7 @@ public class ObjectActionPacketListener implements PacketListener {
                                 }
                                 break;
                             case 172:
-                                CrystalChest.handleChest(player,false);
-                            //    CrystalChest.sendRewardInterface(player);
+                                CrystalChest.sendRewardInterface(player);
                                 break;
 
                             case 9975:
